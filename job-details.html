@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details - HopeHubTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <script>
+      // This script ensures the page respects the system's dark mode preference
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <style>
+      /* Custom style for prose list items */
+      .prose ul > li::before {
+        background-color: #22c55e; /* green-500 */
+      }
+      .dark .prose ul > li::before {
+        background-color: #4ade80; /* green-400 */
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gray-50 dark:bg-black text-gray-800 dark:text-gray-200 font-sans antialiased transition-colors duration-300"
+  >
+    <main class="container mx-auto px-6 py-12 md:py-20">
+      <div class="max-w-5xl mx-auto mb-12">
+        <div class="mb-8">
+          <a
+            href="index.html#open-positions"
+            class="inline-flex items-center gap-2 text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
+          >
+            <i data-feather="arrow-left" class="w-4 h-4"></i>
+            Back to All Positions
+          </a>
+        </div>
+        <h1
+          id="job-title"
+          class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4"
+        >
+          <!-- Job Title Loads Here -->
+        </h1>
+        <div
+          id="job-meta"
+          class="flex flex-wrap items-center text-gray-500 dark:text-gray-400 divide-x divide-gray-200 dark:divide-gray-700"
+        >
+          <!-- Job Meta Info Loads Here -->
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div
+          class="lg:col-span-2 bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-800"
+        >
+          <article
+            id="job-description"
+            class="prose prose-lg dark:prose-invert max-w-none"
+          >
+            <!-- Job Description Loads Here -->
+          </article>
+        </div>
+
+        <div class="lg:col-span-1">
+          <div class="sticky top-12 space-y-8">
+            <div
+              class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl text-center border border-green-200 dark:border-green-800 shadow-sm"
+            >
+              <h3
+                class="text-xl font-bold text-green-800 dark:text-green-300 mb-4"
+              >
+                Ready to Make an Impact?
+              </h3>
+              <a
+                href="index.html#application-form"
+                class="w-full inline-block bg-green-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-600 shadow-lg hover:shadow-green-500/20"
+              >
+                Apply Now
+              </a>
+            </div>
+
+            <div
+              class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800"
+            >
+              <h3
+                class="text-lg font-semibold mb-4 text-gray-900 dark:text-white"
+              >
+                About HopeHubTech
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                HopeHubTech is a leading technology firm based in Bangladesh,
+                dedicated to creating innovative solutions that tackle
+                real-world challenges.
+              </p>
+              <ul class="text-sm space-y-3 text-gray-600 dark:text-gray-400">
+                <li class="flex items-center gap-3">
+                  <i data-feather="map-pin" class="w-4 h-4 text-gray-400"></i>
+                  <span>Manikganj, Dhaka</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-feather="users" class="w-4 h-4 text-gray-400"></i>
+                  <span>50-100 employees</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-feather="globe" class="w-4 h-4 text-gray-400"></i>
+                  <a href="#" class="text-green-600 hover:underline"
+                    >hopehubtech.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const jobDetails = {
+        "ui-ux-design": {
+          title: "UI/UX Designer",
+          location: "Dhaka (On-site)",
+          department: "Design",
+          description: `
+                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+                    <p>As a UI/UX Designer at HopeHubTech, you will be at the forefront of creating intuitive and visually compelling digital experiences. You are a problem-solver and a creative thinker who is passionate about understanding user needs and translating them into beautiful, functional designs.</p>
+                    <p>You will work closely with product managers and engineers to shape our products, from initial concept to final high-fidelity mockups. Your work will directly impact how users interact with our technology, making it more accessible and enjoyable.</p>
+                    <h3>The Opportunity: Your Impact at HopeHubTech 🎨</h3>
+                    <ul>
+                        <li><strong>User-Centric Design:</strong> Conduct user research, create user personas, and map user journeys to inform your design decisions.</li>
+                        <li><strong>Wireframing & Prototyping:</strong> Develop wireframes, user flows, and interactive prototypes to explore and validate design concepts.</li>
+                        <li><strong>Visual Design:</strong> Craft pixel-perfect mockups and design systems that align with our brand identity while ensuring usability and accessibility.</li>
+                        <li><strong>Collaboration:</strong> Partner with cross-functional teams to ensure your designs are implemented to the highest standard.</li>
+                    </ul>
+                    <h3>Who You Are: The Skills You Bring 💡</h3>
+                    <ul>
+                        <li>2+ years of professional UI/UX design experience with a strong portfolio showcasing your work.</li>
+                        <li>Proficiency in design tools like Figma, Sketch, or Adobe XD.</li>
+                        <li>Solid understanding of user-centered design principles, accessibility standards, and interaction design.</li>
+                        <li>Excellent visual design skills with a keen eye for typography, color, and layout.</li>
+                    </ul>
+                `,
+        },
+        "graphics-design": {
+          title: "Graphics Designer",
+          location: "Remote",
+          department: "Design",
+          description: `
+                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+                    <p>HopeHubTech is seeking a creative and versatile Graphics Designer to join our marketing and branding team. In this role, you will be the visual storyteller for our company, creating compelling graphics for digital campaigns, social media, web assets, and marketing materials.</p>
+                    <p>You have a passion for brand identity and can translate complex ideas into simple, powerful visuals. This is a fully remote position, offering you the flexibility to create from wherever you are inspired.</p>
+                    <h3>The Opportunity: Your Impact at HopeHubTech ✨</h3>
+                    <ul>
+                        <li><strong>Brand Visuals:</strong> Design a wide range of materials including social media graphics, ad creatives, infographics, and website visuals that align with our brand.</li>
+                        <li><strong>Marketing Campaigns:</strong> Collaborate with the marketing team to create visually stunning assets for campaigns that drive engagement and conversions.</li>
+                        <li><strong>Creative Concepts:</strong> Brainstorm and develop new creative concepts for branding and promotional activities.</li>
+                        <li><strong>Asset Management:</strong> Organize and maintain a library of design assets for the company.</li>
+                    </ul>
+                    <h3>Who You Are: The Skills You Bring 💡</h3>
+                    <ul>
+                        <li>2+ years of experience in graphic design, with a strong portfolio of digital and print work.</li>
+                        <li>Expert proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign).</li>
+                        <li>A strong understanding of branding, typography, and color theory.</li>
+                        <li>Ability to work independently in a remote environment and manage multiple projects simultaneously.</li>
+                    </ul>
+                `,
+        },
+        "marketing-specialist": {
+          title: "Marketing Specialist",
+          location: "Dhaka (Hybrid)",
+          department: "Marketing",
+          description: `
+                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+                    <p>We are looking for a data-driven and creative Marketing Specialist to help grow the HopeHubTech brand. You will be responsible for developing and executing marketing strategies that increase brand awareness, drive user acquisition, and boost engagement.</p>
+                    <p>You are a master of digital marketing channels and understand how to create and optimize campaigns that deliver results. This hybrid role offers a mix of in-office collaboration in Dhaka and remote work.</p>
+                    <h3>The Opportunity: Your Impact at HopeHubTech 📈</h3>
+                    <ul>
+                        <li><strong>Campaign Management:</strong> Plan, execute, and manage digital marketing campaigns across various channels, including social media, email, and paid advertising.</li>
+                        <li><strong>Content Creation:</strong> Work with our team to create compelling content such as blog posts, case studies, and social media updates.</li>
+                        <li><strong>SEO & Analytics:</strong> Monitor and improve our website's SEO performance, and use analytics tools to track campaign success and identify areas for improvement.</li>
+                        <li><strong>Market Research:</strong> Stay up-to-date with the latest marketing trends and conduct market research to identify new opportunities.</li>
+                    </ul>
+                    <h3>Who You Are: The Skills You Bring 💡</h3>
+                    <ul>
+                        <li>3+ years of experience in a digital marketing role.</li>
+                        <li>Proven experience with SEO, SEM, social media marketing, and email marketing.</li>
+                        <li>Strong analytical skills and experience with tools like Google Analytics.</li>
+                        <li>Excellent written and verbal communication skills.</li>
+                    </ul>
+                `,
+        },
+        "web-development": {
+          title: "Web Developer",
+          location: "Remote",
+          department: "Engineering",
+          description: `
+                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+                    <p>As a Web Developer at HopeHubTech, you will be responsible for building and maintaining the websites and web applications that represent our brand to the world. You are a skilled coder with a passion for creating clean, efficient, and responsive web experiences.</p>
+                    <p>This is a fantastic opportunity for a developer who wants to work with modern web technologies in a fully remote, supportive environment. You will collaborate with designers and marketers to bring our digital presence to life.</p>
+                    <h3>The Opportunity: Your Impact at HopeHubTech 💻</h3>
+                    <ul>
+                        <li><strong>Website Development:</strong> Develop, test, and deploy new websites and features using modern technologies like HTML, CSS, and JavaScript.</li>
+                        <li><strong>CMS Management:</strong> Work with content management systems (like WordPress) to build and manage our web properties.</li>
+                        <li><strong>Performance Optimization:</strong> Ensure our websites are fast, secure, and optimized for all devices.</li>
+                        <li><strong>Collaboration:</strong> Work closely with our design and marketing teams to implement new features and ensure a consistent brand experience.</li>
+                    </ul>
+                    <h3>Who You Are: The Skills You Bring 💡</h3>
+                    <ul>
+                        <li>2+ years of professional web development experience.</li>
+                        <li>Strong proficiency in HTML, CSS, and JavaScript. Experience with a modern framework (like React or Vue.js) is a plus.</li>
+                        <li>Experience with WordPress or another major CMS.</li>
+                        <li>A good understanding of web performance, security, and SEO best practices.</li>
+                    </ul>
+                `,
+        },
+        "website-maintenance": {
+          title: "Website Maintenance Specialist",
+          location: "Remote",
+          department: "Engineering",
+          description: `
+                     <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+                    <p>We are seeking a diligent and detail-oriented Website Maintenance Specialist to ensure our web properties run smoothly and securely. Your primary responsibility will be the ongoing health, performance, and security of our company websites.</p>
+                    <p>You are a proactive problem-solver who enjoys troubleshooting and ensuring everything is up-to-date. This fully remote role is critical to maintaining our professional online presence and ensuring a seamless user experience.</p>
+                    <h3>The Opportunity: Your Impact at HopeHubTech 🛠️</h3>
+                    <ul>
+                        <li><strong>Regular Updates:</strong> Perform regular updates of our CMS (WordPress), themes, and plugins to ensure security and functionality.</li>
+                        <li><strong>Performance Monitoring:</strong> Monitor website performance, uptime, and loading speeds, and take action to optimize them.</li>
+                        <li><strong>Security & Backups:</strong> Implement security best practices and manage regular backups of our websites to prevent data loss.</li>
+                        <li><strong>Troubleshooting:</strong> Quickly identify and resolve any technical issues, bugs, or user-reported problems.</li>
+                    </ul>
+                    <h3>Who You Are: The Skills You Bring 💡</h3>
+                    <ul>
+                        <li>1+ years of experience managing and maintaining WordPress websites.</li>
+                        <li>Familiarity with web hosting environments, cPanel, and FTP.</li>
+                        <li>A solid understanding of website security principles.</li>
+                        <li>Strong problem-solving skills and the ability to work independently.</li>
+                    </ul>
+                `,
+        },
+        "virtual-personal-assistant": {
+          title: "Virtual Personal Assistant",
+          location: "Remote",
+          department: "Admin",
+          description: `
+                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+                    <p>HopeHubTech is looking for a highly organized and efficient Virtual Personal Assistant to provide administrative support to our leadership team. You will be responsible for managing schedules, organizing meetings, handling correspondence, and performing various administrative tasks.</p>
+                    <p>You are a master of organization and communication, able to anticipate needs and proactively manage tasks in a remote setting. Your support will be crucial in helping our team stay focused and productive.</p>
+                    <h3>The Opportunity: Your Impact at HopeHubTech 🗓️</h3>
+                    <ul>
+                        <li><strong>Schedule Management:</strong> Manage calendars, schedule appointments, and coordinate meetings for our executive team.</li>
+                        <li><strong>Communication:</strong> Handle emails, phone calls, and other communications on behalf of the team.</li>
+                        <li><strong>Task Coordination:</strong> Assist with project management, track deadlines, and prepare documents and presentations.</li>
+                        <li><strong>Administrative Support:</strong> Handle travel arrangements, expense reports, and other administrative duties as needed.</li>
+                    </ul>
+                    <h3>Who You Are: The Skills You Bring 💡</h3>
+                    <ul>
+                        <li>Proven experience as a Virtual Assistant, Personal Assistant, or similar role.</li>
+                        <li>Excellent organizational and time management skills.</li>
+                        <li>Strong written and verbal communication skills in English and Bengali.</li>
+                        <li>Proficiency with office software (like Google Workspace or Microsoft Office) and calendar management tools.</li>
+                    </ul>
+                `,
+        },
+        "virtual-social-media-marketing": {
+          title: "Virtual Social Media Marketer",
+          location: "Remote",
+          department: "Marketing",
+          description: `
+                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+                    <p>We are searching for a creative and savvy Virtual Social Media Marketer to manage and grow HopeHubTech's social media presence. You will be responsible for creating engaging content, managing our social channels, and running campaigns to build our online community.</p>
+                    <p>You live and breathe social media and understand the nuances of different platforms. This is a fully remote role perfect for someone who is passionate about building a brand and connecting with an audience online.</p>
+                    <h3>The Opportunity: Your Impact at HopeHubTech 📱</h3>
+                    <ul>
+                        <li><strong>Content Creation:</strong> Develop and execute a content strategy, creating engaging posts, stories, and videos for platforms like Facebook, LinkedIn, and Twitter.</li>
+                        <li><strong>Community Management:</strong> Interact with our followers, respond to comments and messages, and foster a positive online community.</li>
+                        <li><strong>Campaigns & Analytics:</strong> Plan and run social media campaigns, track their performance using analytics tools, and provide regular reports.</li>
+                        <li><strong>Trend Monitoring:</strong> Stay on top of the latest social media trends and best practices to keep our strategy fresh and effective.</li>
+                    </ul>
+                    <h3>Who You Are: The Skills You Bring 💡</h3>
+                    <ul>
+                        <li>1+ years of experience managing social media for a business or brand.</li>
+                        <li>A strong understanding of major social media platforms and their algorithms.</li>
+                        <li>Excellent copywriting and content creation skills.</li>
+                        <li>Experience with social media scheduling and analytics tools.</li>
+                    </ul>
+                `,
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const jobKey = params.get("job") || "senior-frontend-engineer"; // Default to a role if none is specified
+        const job = jobDetails[jobKey];
+
+        const titleEl = document.getElementById("job-title");
+        const metaEl = document.getElementById("job-meta");
+        const descriptionEl = document.getElementById("job-description");
+
+        if (job) {
+          document.title = `Job Details: ${job.title} - HopeHubTech`;
+          titleEl.textContent = job.title;
+
+          metaEl.innerHTML = `
+                    <div class="flex items-center gap-2 pr-4">
+                        <i data-feather="map-pin" class="w-5 h-5"></i>
+                        <span>${job.location}</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4">
+                        <i data-feather="briefcase" class="w-5 h-5"></i>
+                        <span>${job.department} Department</span>
+                    </div>
+                `;
+
+          descriptionEl.innerHTML = job.description;
+        } else {
+          titleEl.textContent = "Position Not Found";
+          descriptionEl.innerHTML =
+            "<p>The job position you are looking for could not be found. Please return to the careers page to see all available positions.</p>";
+        }
+
+        feather.replace();
+      });
+    </script>
+    <script>
+      // Initialize Feather Icons
+      feather.replace();
+    </script>
+  </body>
+</html>
