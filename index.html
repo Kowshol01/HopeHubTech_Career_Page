@@ -10,32 +10,38 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Styles for the multi-step form */
-        .form-step {
-            display: none;
+      /* Styles for the multi-step form */
+      .form-step {
+        display: none;
+      }
+      .form-step.active {
+        display: block;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        .form-step.active {
-            display: block;
-            animation: fadeIn 0.5s ease-in-out;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .progress-bar {
-            transition: width 0.5s ease-in-out;
-        }
-        .skill-tag {
-            transition: all 0.3s ease;
-        }
-        .skill-tag:hover {
-            transform: scale(1.05);
-        }
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
+      }
+      .progress-bar {
+        transition: width 0.5s ease-in-out;
+      }
+      .skill-tag {
+        transition: all 0.3s ease;
+      }
+      .skill-tag:hover {
+        transform: scale(1.05);
+      }
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
     </style>
   </head>
 
@@ -92,18 +98,22 @@
           class="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4"
           data-aos="fade-up"
         >
-          Tech Careers for Youths! <span class="text-green-500">HopeHubTech</span>
+          Tech Careers for Youths!
+          <span class="text-green-500">HopeHubTech</span>
         </h1>
         <p
           class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8"
-          data-aos="fade-up" data-aos-delay="100"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
-          Hands-on training, meaningful work, and growth opportunities for all backgrounds.
+          Hands-on training, meaningful work, and growth opportunities for all
+          backgrounds.
         </p>
         <a
           href="#application-form"
           class="inline-block bg-green-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300"
-          data-aos="fade-up" data-aos-delay="200"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
           Apply Now
         </a>
@@ -117,7 +127,11 @@
           Why Join the <span class="text-green-500">HopeHubTech</span> Team?
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div
               class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-gray-700 mx-auto mb-6"
             >
@@ -137,7 +151,11 @@
             </p>
           </div>
 
-          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div
               class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-gray-700 mx-auto mb-6"
             >
@@ -152,11 +170,16 @@
               Continuous Growth
             </h3>
             <p class="text-gray-600 dark:text-gray-400">
-              We invest in you with dedicated training. We're looking for self-starters eager to learn and grow with us.
+              We invest in you with dedicated training. We're looking for
+              self-starters eager to learn and grow with us.
             </p>
           </div>
 
-          <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div
               class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-gray-700 mx-auto mb-6"
             >
@@ -171,10 +194,15 @@
               Remote Job Offers
             </h3>
             <p class="text-gray-600 dark:text-gray-400">
-             We offer remote positions, allowing you to work from anywhere. Your contribution matters, not your location.
+              We offer remote positions, allowing you to work from anywhere.
+              Your contribution matters, not your location.
             </p>
           </div>
-           <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div
               class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-gray-700 mx-auto mb-6"
             >
@@ -189,7 +217,8 @@
               Project-Based Salary
             </h3>
             <p class="text-gray-600 dark:text-gray-400">
-              Our compensation is project-based, rewarding your hard work and successful outcomes.
+              Our compensation is project-based, rewarding your hard work and
+              successful outcomes.
             </p>
           </div>
         </div>
@@ -204,500 +233,1110 @@
         </h2>
         <div class="space-y-6 max-w-4xl mx-auto">
           <a
-            href="#application-form?job=UI/UX Designer"
+            href="job-details.html?job=ui-ux-designer"
             class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-green-500 dark:hover:border-green-500 transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="flex justify-between items-start">
               <div>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-500">
+                <h3
+                  class="text-xl font-semibold text-green-500 dark:text-green-500"
+                >
                   UI/UX Designer
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 mt-1">
                   Design • Dhaka (On-site)
                 </p>
               </div>
-              <span class="hidden sm:inline-block text-gray-500 dark:text-gray-400">View & Apply →</span>
+              <span
+                class="hidden sm:inline-block text-gray-500 dark:text-gray-400"
+                >View Details →</span
+              >
             </div>
           </a>
           <a
-            href="#application-form?job=Graphics Designer"
+            href="job-details.html?job=graphics-designer"
             class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-green-500 dark:hover:border-green-500 transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="flex justify-between items-start">
               <div>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-500">
+                <h3
+                  class="text-xl font-semibold text-green-500 dark:text-green-500"
+                >
                   Graphics Designer
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 mt-1">
                   Design • Remote
                 </p>
               </div>
-              <span class="hidden sm:inline-block text-gray-500 dark:text-gray-400">View & Apply →</span>
+              <span
+                class="hidden sm:inline-block text-gray-500 dark:text-gray-400"
+                >View Details →</span
+              >
             </div>
           </a>
           <a
-            href="#application-form?job=Marketing Specialist"
+            href="job-details.html?job=marketing-specialist"
             class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-green-500 dark:hover:border-green-500 transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="flex justify-between items-start">
               <div>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-500">
+                <h3
+                  class="text-xl font-semibold text-green-500 dark:text-green-500"
+                >
                   Marketing Specialist
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 mt-1">
                   Marketing • Dhaka (Hybrid)
                 </p>
               </div>
-              <span class="hidden sm:inline-block text-gray-500 dark:text-gray-400">View & Apply →</span>
+              <span
+                class="hidden sm:inline-block text-gray-500 dark:text-gray-400"
+                >View Details →</span
+              >
             </div>
           </a>
           <a
-            href="#application-form?job=Web Developer"
+            href="job-details.html?job=web-developer"
             class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-green-500 dark:hover:border-green-500 transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="flex justify-between items-start">
               <div>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-500">
+                <h3
+                  class="text-xl font-semibold text-green-500 dark:text-green-500"
+                >
                   Web Developer
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 mt-1">
                   Engineering • Remote
                 </p>
               </div>
-              <span class="hidden sm:inline-block text-gray-500 dark:text-gray-400">View & Apply →</span>
+              <span
+                class="hidden sm:inline-block text-gray-500 dark:text-gray-400"
+                >View Details →</span
+              >
             </div>
           </a>
-           <a
-            href="#application-form?job=Website Maintenance Specialist"
+          <a
+            href="job-details.html?job=website-maintenance-specialist"
             class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-green-500 dark:hover:border-green-500 transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="flex justify-between items-start">
               <div>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-500">
+                <h3
+                  class="text-xl font-semibold text-green-500 dark:text-green-500"
+                >
                   Website Maintenance Specialist
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 mt-1">
                   Engineering • Remote
                 </p>
               </div>
-              <span class="hidden sm:inline-block text-gray-500 dark:text-gray-400">View & Apply →</span>
+              <span
+                class="hidden sm:inline-block text-gray-500 dark:text-gray-400"
+                >View Details →</span
+              >
             </div>
           </a>
-           <a
-            href="#application-form?job=Virtual Personal Assistant"
+          <a
+            href="job-details.html?job=virtual-personal-assistant"
             class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-green-500 dark:hover:border-green-500 transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="flex justify-between items-start">
               <div>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-500">
+                <h3
+                  class="text-xl font-semibold text-green-500 dark:text-green-500"
+                >
                   Virtual Personal Assistant
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 mt-1">
                   Admin • Remote
                 </p>
               </div>
-              <span class="hidden sm:inline-block text-gray-500 dark:text-gray-400">View & Apply →</span>
+              <span
+                class="hidden sm:inline-block text-gray-500 dark:text-gray-400"
+                >View Details →</span
+              >
             </div>
           </a>
-           <a
-            href="#application-form?job=Virtual Social Media Marketer"
+          <a
+            href="job-details.html?job=virtual-social-media-marketer"
             class="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-green-500 dark:hover:border-green-500 transition-all duration-300"
             data-aos="fade-up"
           >
             <div class="flex justify-between items-start">
               <div>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-500">
+                <h3
+                  class="text-xl font-semibold text-green-500 dark:text-green-500"
+                >
                   Virtual Social Media Marketer
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 mt-1">
                   Marketing • Remote
                 </p>
               </div>
-              <span class="hidden sm:inline-block text-gray-500 dark:text-gray-400">View & Apply →</span>
+              <span
+                class="hidden sm:inline-block text-gray-500 dark:text-gray-400"
+                >View Details →</span
+              >
             </div>
           </a>
         </div>
       </section>
 
       <!-- Application Form Section -->
-      <section
-        id="application-form"
-        class="w-full"
-        data-aos="fade-up"
-      >
-            <!-- Multi-Step Form Start -->
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden max-w-7xl mx-auto">
-                <!-- Progress Bar -->
-                <div class="bg-gray-200 dark:bg-gray-700 h-2">
-                    <div id="progress" class="progress-bar bg-green-500 h-2" style="width: 0%"></div>
-                </div>
-                <div class="p-8 md:p-12">
-                    <div class="max-w-4xl mx-auto">
-                        <!-- Form Header -->
-                        <div class="pb-4">
-                            <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Job Application</h1>
-                            <p class="text-gray-600 dark:text-gray-400 mt-2">Complete the form to apply for exciting opportunities</p>
-                            <p id="stepCounter" class="text-sm text-gray-500 dark:text-gray-400 mt-4 font-medium"></p>
-                        </div>
+      <section id="application-form" class="w-full" data-aos="fade-up">
+        <!-- Multi-Step Form Start -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden max-w-7xl mx-auto"
+        >
+          <!-- Progress Bar -->
+          <div class="bg-gray-200 dark:bg-gray-700 h-2">
+            <div
+              id="progress"
+              class="progress-bar bg-green-500 h-2"
+              style="width: 0%"
+            ></div>
+          </div>
+          <div class="p-8 md:p-12">
+            <div class="max-w-4xl mx-auto">
+              <!-- Form Header -->
+              <div class="pb-4">
+                <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100">
+                  Job Application
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400 mt-2">
+                  Complete the form to apply for exciting opportunities
+                </p>
+                <p
+                  id="stepCounter"
+                  class="text-sm text-gray-500 dark:text-gray-400 mt-4 font-medium"
+                ></p>
+              </div>
 
-                        <!-- Form Steps -->
-                        <form id="multiStepApplicationForm" class="pt-4 space-y-6">
-                            <!-- Step 1: Personal Information -->
-                            <div class="form-step active" id="step1">
-                                <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-                                    <i data-feather="user" class="w-6 h-6 mr-3 text-green-500"></i>
-                                    <span>Personal Information</span>
-                                </h2>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div class="relative">
-                                        <label for="fullName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name<span class="text-red-500">*</span></label>
-                                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name"
-                                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                        <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                            <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                            <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address<span class="text-red-500">*</span></label>
-                                        <input type="email" id="email" name="email" required placeholder="yourname@gmail.com"
-                                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                        <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                            <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                            <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number<span class="text-red-500">*</span></label>
-                                        <input type="tel" id="phone" name="phone" required placeholder="e.g., 01712345678"
-                                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                        <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                            <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                            <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <label for="whatsapp" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">WhatsApp Number</label>
-                                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="e.g., 01712345678 (if different)"
-                                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                         <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                            <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                      <label for="division" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Division<span class="text-red-500">*</span></label>
-                                      <select id="division" name="division" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                        <option value="" disabled selected>Select your division</option>
-                                      </select>
-                                      <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                        <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                        <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                      </div>
-                                    </div>
-                                    <div class="relative">
-                                      <label for="city" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">City<span class="text-red-500">*</span></label>
-                                      <select id="city" name="city" required disabled class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                        <option value="" disabled selected>Select a division first</option>
-                                      </select>
-                                      <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                        <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                        <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
+              <!-- Form Steps -->
+              <form id="multiStepApplicationForm" class="pt-4 space-y-6">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" id="step1">
+                  <h2
+                    class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center"
+                  >
+                    <i
+                      data-feather="user"
+                      class="w-6 h-6 mr-3 text-green-500"
+                    ></i>
+                    <span>Personal Information</span>
+                  </h2>
 
-                            <!-- Step 2: Education Background -->
-                            <div class="form-step" id="step2">
-                                <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-                                    <i data-feather="award" class="w-6 h-6 mr-3 text-green-500"></i>
-                                    <span>Education & Background</span>
-                                </h2>
-                                
-                                <div class="space-y-6">
-                                    <div class="relative">
-                                        <label for="highestDegree" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Highest Degree<span class="text-red-500">*</span></label>
-                                        <select id="highestDegree" name="highestDegree" required 
-                                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                            <option value="" disabled selected>Select highest degree</option>
-                                            <option value="SSC">SSC</option>
-                                            <option value="HSC">HSC</option>
-                                            <option value="Diploma">Diploma</option>
-                                            <option value="Bachelor's Degree">Bachelor's Degree</option>
-                                            <option value="Master's Degree">Master's Degree</option>
-                                            <option value="PhD">PhD</option>
-                                        </select>
-                                        <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                            <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                            <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <label for="fieldOfStudy" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Field of Study<span class="text-red-500">*</span></label>
-                                        <div class="relative">
-                                            <input type="text" id="fieldOfStudy" name="fieldOfStudy" required placeholder="e.g., Computer Science and Engineering"
-                                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                            <div id="studySuggestions" class="absolute z-10 mt-1 w-full bg-white dark:bg-gray-700 shadow-lg rounded-lg border border-gray-300 dark:border-gray-600 hidden">
-                                                <!-- Suggestions will load here -->
-                                            </div>
-                                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                                <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                                <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 3: Questions -->
-                            <div class="form-step" id="step3">
-                                <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-                                    <i data-feather="help-circle" class="w-6 h-6 mr-3 text-green-500"></i>
-                                    <span>Quick Questions</span>
-                                </h2>
-                                
-                                <div class="space-y-6">
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Do you have a good smartphone?<span class="text-red-500">*</span></label>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="smartphone" value="yes" required class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">Yes</span>
-                                                <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="smartphone" value="no" class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">No</span>
-                                                <i data-feather="x-circle" class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Do you have internet access on your phone/PC?<span class="text-red-500">*</span></label>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="internet" value="yes" required class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">Yes</span>
-                                                <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="internet" value="no" class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">No</span>
-                                                <i data-feather="x-circle" class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Do you have a PC?<span class="text-red-500">*</span></label>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="pc" value="yes" required class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">Yes</span>
-                                                <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="pc" value="no" class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">No</span>
-                                                <i data-feather="x-circle" class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Do you use internet regularly?<span class="text-red-500">*</span></label>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="regularInternet" value="yes" required class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">Yes</span>
-                                                <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="regularInternet" value="no" class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">No</span>
-                                                <i data-feather="x-circle" class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Can you do remote job over internet?<span class="text-red-500">*</span></label>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="remoteJob" value="yes" required class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">Yes</span>
-                                                <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                            <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                                <input type="radio" name="remoteJob" value="no" class="hidden">
-                                                <span class="font-medium text-gray-800 dark:text-gray-200">No</span>
-                                                <i data-feather="x-circle" class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"></i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="relative">
-                                        <label for="fatherProfession" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Father's Profession<span class="text-red-500">*</span></label>
-                                        <input type="text" id="fatherProfession" name="fatherProfession" required placeholder="e.g., Businessman"
-                                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
-                                        <div class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none">
-                                            <i data-feather="check" class="h-5 w-5 text-green-500 hidden success-icon"></i>
-                                            <i data-feather="x" class="h-5 w-5 text-red-500 hidden error-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 4: Position & Interest -->
-                            <div class="form-step" id="step4">
-                                <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-                                    <i data-feather="briefcase" class="w-6 h-6 mr-3 text-green-500"></i>
-                                    <span>Position & Interest</span>
-                                </h2>
-                                
-                                <div class="space-y-4">
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Select the position you're interested in:</p>
-                                    <div id="positionsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                        <!-- Position Items -->
-                                        <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <input type="checkbox" name="positions" value="UI/UX Designer" class="hidden">
-                                            <span class="font-medium text-gray-800 dark:text-gray-200">UI/UX Designer</span>
-                                            <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                        </label>
-                                        <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <input type="checkbox" name="positions" value="Graphics Designer" class="hidden">
-                                            <span class="font-medium text-gray-800 dark:text-gray-200">Graphics Designer</span>
-                                            <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                        </label>
-                                        <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <input type="checkbox" name="positions" value="Marketing Specialist" class="hidden">
-                                            <span class="font-medium text-gray-800 dark:text-gray-200">Marketing Specialist</span>
-                                            <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                        </label>
-                                        <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <input type="checkbox" name="positions" value="Web Developer" class="hidden">
-                                            <span class="font-medium text-gray-800 dark:text-gray-200">Web Developer</span>
-                                            <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                        </label>
-                                        <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <input type="checkbox" name="positions" value="Website Maintenance Specialist" class="hidden">
-                                            <span class="font-medium text-gray-800 dark:text-gray-200">Website Maintenance Specialist</span>
-                                            <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                        </label>
-                                        <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <input type="checkbox" name="positions" value="Virtual Personal Assistant" class="hidden">
-                                            <span class="font-medium text-gray-800 dark:text-gray-200">Virtual Personal Assistant</span>
-                                            <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                        </label>
-                                        <label class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700">
-                                            <input type="checkbox" name="positions" value="Virtual Social Media Marketer" class="hidden">
-                                            <span class="font-medium text-gray-800 dark:text-gray-200">Virtual Social Media Marketer</span>
-                                            <i data-feather="check-circle" class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"></i>
-                                        </label>
-                                    </div>
-                                    <button type="button" id="clearPosition" class="hidden mt-4 text-sm text-green-600 dark:text-green-400 hover:underline">Clear Selection</button>
-                                </div>
-                            </div>
-
-                            <!-- Step 5: Skills & Expertise -->
-                            <div class="form-step" id="step5">
-                                <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-                                    <i data-feather="star" class="w-6 h-6 mr-3 text-green-500"></i>
-                                    <span>Skills & Expertise</span>
-                                </h2>
-                                
-                                <div class="space-y-6">
-                                    <div class="relative">
-                                        <label for="skillInput" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Add your skills</label>
-                                        <input type="text" id="skillInput" 
-                                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition" placeholder="e.g., JavaScript, Figma, SEO">
-                                        <div id="skillSuggestions" class="absolute z-10 mt-1 w-full bg-white dark:bg-gray-700 shadow-lg rounded-lg border border-gray-300 dark:border-gray-600 hidden">
-                                            <!-- Suggestions will load here -->
-                                        </div>
-                                    </div>
-                                    <div id="selectedSkills" class="flex flex-wrap gap-2">
-                                        <!-- Selected skills will appear here -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 6: Upload CV -->
-                            <div class="form-step" id="step6">
-                                <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-                                    <i data-feather="file-text" class="w-6 h-6 mr-3 text-green-500"></i>
-                                    <span>Upload Your CV</span>
-                                </h2>
-                                
-                                <div class="space-y-4">
-                                    <div id="uploadContainer" class="w-full">
-                                        <label for="cvUpload" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 dark:border-gray-600 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition">
-                                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                                <i data-feather="upload-cloud" class="w-8 h-8 text-gray-500 dark:text-gray-400"></i>
-                                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">Click to upload or drag and drop</p>
-                                                <p class="text-xs text-gray-500 dark:text-gray-400">PDF, DOC, DOCX (Max. 5MB)</p>
-                                            </div>
-                                            <input id="cvUpload" name="cv" type="file" class="hidden" accept=".pdf,.doc,.docx" required>
-                                        </label>
-                                    </div>
-                                    <div id="fileInfo" class="hidden flex items-center justify-between w-full p-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-                                        <div class="flex items-center gap-3">
-                                            <i data-feather="file-text" class="w-6 h-6 text-green-500"></i>
-                                            <span id="fileName" class="text-sm font-medium text-gray-700 dark:text-gray-300"></span>
-                                        </div>
-                                        <button type="button" id="removeFileBtn" class="p-1 text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 rounded-full hover:bg-red-100 dark:hover:bg-red-900/50">
-                                            <i data-feather="x" class="w-5 h-5"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                                <div class="mt-8 bg-green-50 dark:bg-gray-700/50 rounded-lg p-4">
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <i data-feather="info" class="w-5 h-5 text-green-500 dark:text-green-400"></i>
-                                        </div>
-                                        <div class="ml-3">
-                                            <h3 class="text-sm font-medium text-green-800 dark:text-green-300">Almost done!</h3>
-                                            <div class="mt-2 text-sm text-green-700 dark:text-green-400">
-                                                <p>After submitting your application, our team will review your details and contact you soon.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 7: Thank You -->
-                            <div class="form-step" id="step7">
-                                <div class="text-center py-12">
-                                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 dark:bg-green-900">
-                                        <i data-feather="check" class="h-6 w-6 text-green-600 dark:text-green-400"></i>
-                                    </div>
-                                    <h2 class="mt-3 text-2xl font-bold text-gray-900 dark:text-gray-100">Application Submitted!</h2>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Thank you for applying. We'll review your application and get back to you soon.</p>
-                                </div>
-                            </div>
-
-                            <!-- Navigation Buttons -->
-                            <div class="flex justify-between pt-6 border-t border-gray-200 dark:border-gray-700">
-                                <button type="button" id="prevBtn" onclick="prevStep()" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 hidden">
-                                    <i data-feather="chevron-left" class="w-4 h-4 inline mr-1"></i> Previous
-                                </button>
-                                <button type="button" id="nextBtn" onclick="nextStep()" class="ml-auto px-4 py-2 border border-transparent rounded-lg shadow-sm text-white bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-gray-800 focus:ring-green-500">
-                                    Next <i data-feather="chevron-right" class="w-4 h-4 inline ml-1"></i>
-                                </button>
-                            </div>
-                        </form>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative">
+                      <label
+                        for="fullName"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Full Name<span class="text-red-500">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        required
+                        placeholder="Enter your full name"
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      />
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                        <i
+                          data-feather="x"
+                          class="h-5 w-5 text-red-500 hidden error-icon"
+                        ></i>
+                      </div>
                     </div>
+                    <div class="relative">
+                      <label
+                        for="email"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Email Address<span class="text-red-500">*</span></label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="yourname@gmail.com"
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      />
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                        <i
+                          data-feather="x"
+                          class="h-5 w-5 text-red-500 hidden error-icon"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="phone"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Phone Number<span class="text-red-500">*</span></label
+                      >
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        placeholder="e.g., 01712345678"
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      />
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                        <i
+                          data-feather="x"
+                          class="h-5 w-5 text-red-500 hidden error-icon"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="whatsapp"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >WhatsApp Number</label
+                      >
+                      <input
+                        type="tel"
+                        id="whatsapp"
+                        name="whatsapp"
+                        placeholder="e.g., 01712345678 (if different)"
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      />
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="division"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Division<span class="text-red-500">*</span></label
+                      >
+                      <select
+                        id="division"
+                        name="division"
+                        required
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      >
+                        <option value="" disabled selected>
+                          Select your division
+                        </option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                        <i
+                          data-feather="x"
+                          class="h-5 w-5 text-red-500 hidden error-icon"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="city"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >City<span class="text-red-500">*</span></label
+                      >
+                      <select
+                        id="city"
+                        name="city"
+                        required
+                        disabled
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      >
+                        <option value="" disabled selected>
+                          Select a division first
+                        </option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                        <i
+                          data-feather="x"
+                          class="h-5 w-5 text-red-500 hidden error-icon"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Step 2: Education Background -->
+                <div class="form-step" id="step2">
+                  <h2
+                    class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center"
+                  >
+                    <i
+                      data-feather="award"
+                      class="w-6 h-6 mr-3 text-green-500"
+                    ></i>
+                    <span>Education & Background</span>
+                  </h2>
+
+                  <div class="space-y-6">
+                    <div class="relative">
+                      <label
+                        for="highestDegree"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Highest Degree<span class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <select
+                        id="highestDegree"
+                        name="highestDegree"
+                        required
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      >
+                        <option value="" disabled selected>
+                          Select highest degree
+                        </option>
+                        <option value="SSC">SSC</option>
+                        <option value="HSC">HSC</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Bachelor's Degree">
+                          Bachelor's Degree
+                        </option>
+                        <option value="Master's Degree">Master's Degree</option>
+                        <option value="PhD">PhD</option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                        <i
+                          data-feather="x"
+                          class="h-5 w-5 text-red-500 hidden error-icon"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="fieldOfStudy"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Field of Study<span class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <div class="relative">
+                        <input
+                          type="text"
+                          id="fieldOfStudy"
+                          name="fieldOfStudy"
+                          required
+                          placeholder="e.g., Computer Science and Engineering"
+                          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                        />
+                        <div
+                          id="studySuggestions"
+                          class="absolute z-10 mt-1 w-full bg-white dark:bg-gray-700 shadow-lg rounded-lg border border-gray-300 dark:border-gray-600 hidden"
+                        >
+                          <!-- Suggestions will load here -->
+                        </div>
+                        <div
+                          class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                        >
+                          <i
+                            data-feather="check"
+                            class="h-5 w-5 text-green-500 hidden success-icon"
+                          ></i>
+                          <i
+                            data-feather="x"
+                            class="h-5 w-5 text-red-500 hidden error-icon"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 3: Questions -->
+                <div class="form-step" id="step3">
+                  <h2
+                    class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center"
+                  >
+                    <i
+                      data-feather="help-circle"
+                      class="w-6 h-6 mr-3 text-green-500"
+                    ></i>
+                    <span>Quick Questions</span>
+                  </h2>
+
+                  <div class="space-y-6">
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        >Do you have a good smartphone?<span
+                          class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="smartphone"
+                            value="yes"
+                            required
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >Yes</span
+                          >
+                          <i
+                            data-feather="check-circle"
+                            class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="smartphone"
+                            value="no"
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >No</span
+                          >
+                          <i
+                            data-feather="x-circle"
+                            class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        >Do you have internet access on your phone/PC?<span
+                          class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="internet"
+                            value="yes"
+                            required
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >Yes</span
+                          >
+                          <i
+                            data-feather="check-circle"
+                            class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="internet"
+                            value="no"
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >No</span
+                          >
+                          <i
+                            data-feather="x-circle"
+                            class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        >Do you have a PC?<span class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="pc"
+                            value="yes"
+                            required
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >Yes</span
+                          >
+                          <i
+                            data-feather="check-circle"
+                            class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="pc"
+                            value="no"
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >No</span
+                          >
+                          <i
+                            data-feather="x-circle"
+                            class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        >Do you use internet regularly?<span
+                          class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="regularInternet"
+                            value="yes"
+                            required
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >Yes</span
+                          >
+                          <i
+                            data-feather="check-circle"
+                            class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="regularInternet"
+                            value="no"
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >No</span
+                          >
+                          <i
+                            data-feather="x-circle"
+                            class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        >Can you do remote job over internet?<span
+                          class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="remoteJob"
+                            value="yes"
+                            required
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >Yes</span
+                          >
+                          <i
+                            data-feather="check-circle"
+                            class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                        <label
+                          class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <input
+                            type="radio"
+                            name="remoteJob"
+                            value="no"
+                            class="hidden"
+                          />
+                          <span
+                            class="font-medium text-gray-800 dark:text-gray-200"
+                            >No</span
+                          >
+                          <i
+                            data-feather="x-circle"
+                            class="x-icon absolute right-3 w-5 h-5 text-red-500 opacity-0 transition-opacity"
+                          ></i>
+                        </label>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      id="clearQuickQuestions"
+                      class="hidden mt-4 text-sm text-green-600 dark:text-green-400 hover:underline"
+                    >
+                      Clear Selections
+                    </button>
+
+                    <div class="relative">
+                      <label
+                        for="fatherProfession"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Father's Profession<span class="text-red-500"
+                          >*</span
+                        ></label
+                      >
+                      <input
+                        type="text"
+                        id="fatherProfession"
+                        name="fatherProfession"
+                        required
+                        placeholder="e.g., Businessman"
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                      />
+                      <div
+                        class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
+                      >
+                        <i
+                          data-feather="check"
+                          class="h-5 w-5 text-green-500 hidden success-icon"
+                        ></i>
+                        <i
+                          data-feather="x"
+                          class="h-5 w-5 text-red-500 hidden error-icon"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 4: Position & Interest -->
+                <div class="form-step" id="step4">
+                  <h2
+                    class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center"
+                  >
+                    <i
+                      data-feather="briefcase"
+                      class="w-6 h-6 mr-3 text-green-500"
+                    ></i>
+                    <span>Position & Interest</span>
+                  </h2>
+
+                  <div class="space-y-4">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Select the position you're interested in:
+                    </p>
+                    <div
+                      id="positionsContainer"
+                      class="grid grid-cols-1 md:grid-cols-2 gap-3"
+                    >
+                      <!-- Position Items -->
+                      <label
+                        class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="positions"
+                          value="UI/UX Designer"
+                          class="hidden"
+                        />
+                        <span
+                          class="font-medium text-gray-800 dark:text-gray-200"
+                          >UI/UX Designer</span
+                        >
+                        <i
+                          data-feather="check-circle"
+                          class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                        ></i>
+                      </label>
+                      <label
+                        class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="positions"
+                          value="Graphics Designer"
+                          class="hidden"
+                        />
+                        <span
+                          class="font-medium text-gray-800 dark:text-gray-200"
+                          >Graphics Designer</span
+                        >
+                        <i
+                          data-feather="check-circle"
+                          class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                        ></i>
+                      </label>
+                      <label
+                        class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="positions"
+                          value="Marketing Specialist"
+                          class="hidden"
+                        />
+                        <span
+                          class="font-medium text-gray-800 dark:text-gray-200"
+                          >Marketing Specialist</span
+                        >
+                        <i
+                          data-feather="check-circle"
+                          class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                        ></i>
+                      </label>
+                      <label
+                        class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="positions"
+                          value="Web Developer"
+                          class="hidden"
+                        />
+                        <span
+                          class="font-medium text-gray-800 dark:text-gray-200"
+                          >Web Developer</span
+                        >
+                        <i
+                          data-feather="check-circle"
+                          class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                        ></i>
+                      </label>
+                      <label
+                        class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="positions"
+                          value="Website Maintenance Specialist"
+                          class="hidden"
+                        />
+                        <span
+                          class="font-medium text-gray-800 dark:text-gray-200"
+                          >Website Maintenance Specialist</span
+                        >
+                        <i
+                          data-feather="check-circle"
+                          class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                        ></i>
+                      </label>
+                      <label
+                        class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="positions"
+                          value="Virtual Personal Assistant"
+                          class="hidden"
+                        />
+                        <span
+                          class="font-medium text-gray-800 dark:text-gray-200"
+                          >Virtual Personal Assistant</span
+                        >
+                        <i
+                          data-feather="check-circle"
+                          class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                        ></i>
+                      </label>
+                      <label
+                        class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="positions"
+                          value="Virtual Social Media Marketer"
+                          class="hidden"
+                        />
+                        <span
+                          class="font-medium text-gray-800 dark:text-gray-200"
+                          >Virtual Social Media Marketer</span
+                        >
+                        <i
+                          data-feather="check-circle"
+                          class="check-icon absolute right-3 w-5 h-5 text-green-500 opacity-0 transition-opacity"
+                        ></i>
+                      </label>
+                    </div>
+                    <button
+                      type="button"
+                      id="clearPosition"
+                      class="hidden mt-4 text-sm text-green-600 dark:text-green-400 hover:underline"
+                    >
+                      Clear Selection
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Step 5: Skills & Expertise -->
+                <div class="form-step" id="step5">
+                  <h2
+                    class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center"
+                  >
+                    <i
+                      data-feather="star"
+                      class="w-6 h-6 mr-3 text-green-500"
+                    ></i>
+                    <span>Skills & Expertise</span>
+                  </h2>
+
+                  <div class="space-y-6">
+                    <div class="relative">
+                      <label
+                        for="skillInput"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        >Add your skills</label
+                      >
+                      <input
+                        type="text"
+                        id="skillInput"
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
+                        placeholder="e.g., JavaScript, Figma, SEO"
+                      />
+                      <div
+                        id="skillSuggestions"
+                        class="absolute z-10 mt-1 w-full bg-white dark:bg-gray-700 shadow-lg rounded-lg border border-gray-300 dark:border-gray-600 hidden"
+                      >
+                        <!-- Suggestions will load here -->
+                      </div>
+                    </div>
+                    <div id="selectedSkills" class="flex flex-wrap gap-2">
+                      <!-- Selected skills will appear here -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 6: Upload CV -->
+                <div class="form-step" id="step6">
+                  <h2
+                    class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center"
+                  >
+                    <i
+                      data-feather="file-text"
+                      class="w-6 h-6 mr-3 text-green-500"
+                    ></i>
+                    <span>Upload Your CV</span>
+                  </h2>
+
+                  <div class="space-y-4">
+                    <div id="uploadContainer" class="w-full">
+                      <label
+                        for="cvUpload"
+                        class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 dark:border-gray-600 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-center pt-5 pb-6"
+                        >
+                          <i
+                            data-feather="upload-cloud"
+                            class="w-8 h-8 text-gray-500 dark:text-gray-400"
+                          ></i>
+                          <p
+                            class="mb-2 text-sm text-gray-500 dark:text-gray-400"
+                          >
+                            Click to upload or drag and drop
+                          </p>
+                          <p class="text-xs text-gray-500 dark:text-gray-400">
+                            PDF, DOC, DOCX (Max. 5MB)
+                          </p>
+                        </div>
+                        <input
+                          id="cvUpload"
+                          name="cv"
+                          type="file"
+                          class="hidden"
+                          accept=".pdf,.doc,.docx"
+                          required
+                        />
+                      </label>
+                    </div>
+                    <div
+                      id="fileInfo"
+                      class="hidden flex items-center justify-between w-full p-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
+                    >
+                      <div class="flex items-center gap-3">
+                        <i
+                          data-feather="file-text"
+                          class="w-6 h-6 text-green-500"
+                        ></i>
+                        <span
+                          id="fileName"
+                          class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                        ></span>
+                      </div>
+                      <button
+                        type="button"
+                        id="removeFileBtn"
+                        class="p-1 text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 rounded-full hover:bg-red-100 dark:hover:bg-red-900/50"
+                      >
+                        <i data-feather="x" class="w-5 h-5"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mt-8 bg-green-50 dark:bg-gray-700/50 rounded-lg p-4"
+                  >
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i
+                          data-feather="info"
+                          class="w-5 h-5 text-green-500 dark:text-green-400"
+                        ></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3
+                          class="text-sm font-medium text-green-800 dark:text-green-300"
+                        >
+                          Almost done!
+                        </h3>
+                        <div
+                          class="mt-2 text-sm text-green-700 dark:text-green-400"
+                        >
+                          <p>
+                            After submitting your application, our team will
+                            review your details and contact you soon.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 7: Thank You -->
+                <div class="form-step" id="step7">
+                  <div class="text-center py-12">
+                    <div
+                      class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 dark:bg-green-900"
+                    >
+                      <i
+                        data-feather="check"
+                        class="h-6 w-6 text-green-600 dark:text-green-400"
+                      ></i>
+                    </div>
+                    <h2
+                      class="mt-3 text-2xl font-bold text-gray-900 dark:text-gray-100"
+                    >
+                      Application Submitted!
+                    </h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">
+                      Thank you for applying. We'll review your application and
+                      get back to you soon.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div
+                  class="flex justify-between pt-6 border-t border-gray-200 dark:border-gray-700"
+                >
+                  <button
+                    type="button"
+                    id="prevBtn"
+                    onclick="prevStep()"
+                    class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 hidden"
+                  >
+                    <i
+                      data-feather="chevron-left"
+                      class="w-4 h-4 inline mr-1"
+                    ></i>
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    id="nextBtn"
+                    onclick="nextStep()"
+                    class="ml-auto px-4 py-2 border border-transparent rounded-lg shadow-sm text-white bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-gray-800 focus:ring-green-500"
+                  >
+                    Next
+                    <i
+                      data-feather="chevron-right"
+                      class="w-4 h-4 inline ml-1"
+                    ></i>
+                  </button>
+                </div>
+              </form>
             </div>
-            <!-- Multi-Step Form End -->
+          </div>
+        </div>
+        <!-- Multi-Step Form End -->
       </section>
     </main>
 
@@ -754,441 +1393,651 @@
 
       lucide.createIcons();
     </script>
-    
+
     <!-- Multi-Step Form Script -->
     <script>
-        // Form navigation logic
-        let currentStep = 1;
-        const totalSteps = 6;
-        
-        document.getElementById('stepCounter').textContent = `Step ${currentStep} of ${totalSteps}`;
+      // Form navigation logic
+      let currentStep = 1;
+      const totalSteps = 6;
 
-        function updateProgress() {
-            const progress = ((currentStep - 1) / totalSteps) * 100;
-            document.getElementById('progress').style.width = `${progress}%`;
-        }
-        
-        function resetStepUI(step) {
-            if (!step) return;
-            if (step === 3) {
-                 document.querySelectorAll('#step3 input[type="radio"]').forEach(radio => {
-                    const parent = radio.parentElement;
-                    parent.classList.remove('hidden');
-                 });
-            }
-            if (step === 4) {
-                document.querySelectorAll('#positionsContainer label').forEach(label => {
-                    label.classList.remove('hidden');
-                });
-                document.getElementById('clearPosition').classList.add('hidden');
-            }
-        }
-        
-        function showStep(step) {
-            const previousStepEl = document.querySelector('.form-step.active');
-            
-            // If there was a previous step, reset its UI (un-hide options)
-            if (previousStepEl) {
-                const previousStepId = parseInt(previousStepEl.id.replace('step', ''));
-                resetStepUI(previousStepId);
-            }
+      document.getElementById("stepCounter").textContent =
+        `Step ${currentStep} of ${totalSteps}`;
 
-            // Hide all steps to be safe
-            document.querySelectorAll('.form-step').forEach(el => {
-                el.classList.remove('active');
+      function updateProgress() {
+        const progress = ((currentStep - 1) / totalSteps) * 100;
+        document.getElementById("progress").style.width = `${progress}%`;
+      }
+
+      function resetStepUI(step) {
+        if (!step) return;
+        if (step === 3) {
+          document
+            .querySelectorAll('#step3 input[type="radio"]')
+            .forEach((radio) => {
+              const parent = radio.parentElement;
+              parent.classList.remove("hidden");
             });
-            
-            document.getElementById(`step${step}`).classList.add('active');
-            
-            document.getElementById('stepCounter').textContent = `Step ${step} of ${totalSteps}`;
-
-            document.getElementById('prevBtn').classList.toggle('hidden', step === 1);
-            document.getElementById('nextBtn').innerHTML = step === totalSteps ? 'Submit <i data-feather="send" class="w-4 h-4 inline ml-1"></i>' : 'Next <i data-feather="chevron-right" class="w-4 h-4 inline ml-1"></i>';
-            
-            feather.replace();
+          clearQuickQuestionsBtn.classList.add("hidden");
         }
-        
-        function nextStep() {
-            if (validateStep(currentStep)) {
-                if (currentStep < totalSteps) {
-                    currentStep++;
-                    updateProgress();
-                    showStep(currentStep);
-                } else {
-                    document.getElementById('step6').classList.remove('active');
-                    document.getElementById('step7').classList.add('active');
-                    document.getElementById('prevBtn').classList.add('hidden');
-                    document.getElementById('nextBtn').classList.add('hidden');
-                    document.getElementById('stepCounter').textContent = 'Application Complete!';
-                    document.getElementById('progress').style.width = '100%';
-                }
-            }
+        if (step === 4) {
+          document
+            .querySelectorAll("#positionsContainer label")
+            .forEach((label) => {
+              label.classList.remove("hidden");
+            });
+          document.getElementById("clearPosition").classList.add("hidden");
         }
-        
-        function prevStep() {
-            if (currentStep > 1) {
-                currentStep--;
-                updateProgress();
-                showStep(currentStep);
-            }
-        }
-        
-        function validateStep(step) {
-            let isValid = true;
+      }
 
-            if (step === 1) {
-                const requiredFields = ['fullName', 'email', 'phone', 'division', 'city'];
-                requiredFields.forEach(field => {
-                    if(!checkFieldValidity(document.getElementById(field))) isValid = false;
-                });
-            }
+      function showStep(step) {
+        const previousStepEl = document.querySelector(".form-step.active");
 
-            if (step === 2) {
-                if(!checkFieldValidity(document.getElementById('highestDegree'))) isValid = false;
-                if(!checkFieldValidity(document.getElementById('fieldOfStudy'))) isValid = false;
-            }
-
-            if (step === 3) {
-                const requiredRadios = ['smartphone', 'internet', 'pc', 'regularInternet', 'remoteJob'];
-                requiredRadios.forEach(radioName => {
-                    const questionLabel = document.querySelector(`input[name="${radioName}"]`).closest('.grid').previousElementSibling;
-                    if (!document.querySelector(`input[name="${radioName}"]:checked`)) {
-                        isValid = false;
-                        questionLabel.classList.add('text-red-500');
-                    } else {
-                        questionLabel.classList.remove('text-red-500');
-                    }
-                });
-
-                if(!checkFieldValidity(document.getElementById('fatherProfession'))) isValid = false;
-
-            }
-
-            if (step === 4) {
-                const positionsEl = document.querySelector('#step4 > div > p');
-                if (!document.querySelector('input[name="positions"]:checked')) {
-                    isValid = false;
-                    positionsEl.classList.add('text-red-500');
-                } else {
-                    positionsEl.classList.remove('text-red-500');
-                }
-            }
-
-            if (step === 5) {
-                const selectedSkills = document.getElementById('selectedSkills').children.length;
-                const skillRequiredPositions = ['UI/UX Designer', 'Graphics Designer', 'Web Developer', 'Website Maintenance Specialist'];
-                let skillRequired = false;
-                
-                skillRequiredPositions.forEach(pos => {
-                    if (document.querySelector(`input[name="positions"][value="${pos}"]:checked`)) {
-                        skillRequired = true;
-                    }
-                });
-                
-                const skillInputEl = document.getElementById('skillInput');
-                if (skillRequired && selectedSkills === 0) {
-                    isValid = false;
-                    skillInputEl.classList.add('border-red-500', 'dark:border-red-500');
-                } else {
-                     skillInputEl.classList.remove('border-red-500', 'dark:border-red-500');
-                }
-            }
-
-            if (step === 6) {
-                const uploadContainer = document.getElementById('uploadContainer');
-                if (!document.getElementById('cvUpload').files.length) {
-                    isValid = false;
-                    uploadContainer.querySelector('label').classList.add('border-red-500', 'dark:border-red-500');
-                } else {
-                    uploadContainer.querySelector('label').classList.remove('border-red-500', 'dark:border-red-500');
-                }
-            }
-            
-            return isValid;
+        // If there was a previous step, reset its UI (un-hide options)
+        if (previousStepEl) {
+          const previousStepId = parseInt(
+            previousStepEl.id.replace("step", "")
+          );
+          resetStepUI(previousStepId);
         }
 
-        const locations = {
-            "Dhaka": ["Dhaka", "Gazipur", "Narayanganj", "Tangail", "Manikganj", "Munshiganj"],
-            "Chittagong": ["Chittagong", "Cox's Bazar", "Comilla", "Feni", "Brahmanbaria"],
-            "Khulna": ["Khulna", "Jessore", "Satkhira", "Bagerhat"],
-            "Sylhet": ["Sylhet", "Sunamganj", "Habiganj", "Moulvibazar"],
-            "Rajshahi": ["Rajshahi", "Bogra", "Pabna", "Naogaon"],
-            "Barisal": ["Barisal", "Patuakhali", "Bhola"],
-            "Rangpur": ["Rangpur", "Dinajpur", "Gaibandha"]
-        };
-
-        const divisionSelect = document.getElementById('division');
-        const citySelect = document.getElementById('city');
-
-        for (const division in locations) {
-            const option = document.createElement('option');
-            option.value = division;
-            option.textContent = division;
-            divisionSelect.appendChild(option);
-        }
-
-        divisionSelect.addEventListener('change', function() {
-            const selectedDivision = this.value;
-            citySelect.innerHTML = '<option value="" disabled selected>Select your city</option>';
-            citySelect.disabled = true;
-
-            if (selectedDivision) {
-                citySelect.disabled = false;
-                locations[selectedDivision].forEach(city => {
-                    const option = document.createElement('option');
-                    option.value = city;
-                    option.textContent = city;
-                    citySelect.appendChild(option);
-                });
-            }
+        // Hide all steps to be safe
+        document.querySelectorAll(".form-step").forEach((el) => {
+          el.classList.remove("active");
         });
-        
-        const studyFields = [
-            "Computer Science and Engineering", "Electrical and Electronic Engineering", "Civil Engineering",
-            "Mechanical Engineering", "Business Administration", "Marketing", "Finance", "Accounting",
-            "MBBS (Medicine)", "Pharmacy", "English Literature", "Bengali Literature", "Economics", "Sociology", "Law",
-            "Architecture", "Physics", "Chemistry", "Mathematics"
-        ];
-        
-        document.getElementById('fieldOfStudy').addEventListener('input', function() {
-            const input = this.value.toLowerCase();
-            const suggestions = document.getElementById('studySuggestions');
-            
-            if (input.length > 1) {
-                const matches = studyFields.filter(field => field.toLowerCase().includes(input));
-                if (matches.length > 0) {
-                    suggestions.innerHTML = matches.map(field => 
-                        `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer dark:text-gray-200" onclick="selectStudyField('${field}')">${field}</div>`
-                    ).join('');
-                    suggestions.classList.remove('hidden');
-                } else {
-                    suggestions.classList.add('hidden');
-                }
+
+        document.getElementById(`step${step}`).classList.add("active");
+
+        document.getElementById("stepCounter").textContent =
+          `Step ${step} of ${totalSteps}`;
+
+        document
+          .getElementById("prevBtn")
+          .classList.toggle("hidden", step === 1);
+        document.getElementById("nextBtn").innerHTML =
+          step === totalSteps
+            ? 'Submit <i data-feather="send" class="w-4 h-4 inline ml-1"></i>'
+            : 'Next <i data-feather="chevron-right" class="w-4 h-4 inline ml-1"></i>';
+
+        feather.replace();
+      }
+
+      function nextStep() {
+        if (validateStep(currentStep)) {
+          if (currentStep < totalSteps) {
+            currentStep++;
+            updateProgress();
+            showStep(currentStep);
+          } else {
+            document.getElementById("step6").classList.remove("active");
+            document.getElementById("step7").classList.add("active");
+            document.getElementById("prevBtn").classList.add("hidden");
+            document.getElementById("nextBtn").classList.add("hidden");
+            document.getElementById("stepCounter").textContent =
+              "Application Complete!";
+            document.getElementById("progress").style.width = "100%";
+          }
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          updateProgress();
+          showStep(currentStep);
+        }
+      }
+
+      function validateStep(step) {
+        let isValid = true;
+
+        if (step === 1) {
+          const requiredFields = [
+            "fullName",
+            "email",
+            "phone",
+            "division",
+            "city",
+          ];
+          requiredFields.forEach((field) => {
+            if (!checkFieldValidity(document.getElementById(field)))
+              isValid = false;
+          });
+        }
+
+        if (step === 2) {
+          if (!checkFieldValidity(document.getElementById("highestDegree")))
+            isValid = false;
+          if (!checkFieldValidity(document.getElementById("fieldOfStudy")))
+            isValid = false;
+        }
+
+        if (step === 3) {
+          const requiredRadios = [
+            "smartphone",
+            "internet",
+            "pc",
+            "regularInternet",
+            "remoteJob",
+          ];
+          requiredRadios.forEach((radioName) => {
+            const questionLabel = document
+              .querySelector(`input[name="${radioName}"]`)
+              .closest(".grid").previousElementSibling;
+            if (!document.querySelector(`input[name="${radioName}"]:checked`)) {
+              isValid = false;
+              questionLabel.classList.add("text-red-500");
             } else {
-                suggestions.classList.add('hidden');
+              questionLabel.classList.remove("text-red-500");
             }
-        });
-        
-        function selectStudyField(field) {
-            document.getElementById('fieldOfStudy').value = field;
-            document.getElementById('studySuggestions').classList.add('hidden');
+          });
+
+          if (!checkFieldValidity(document.getElementById("fatherProfession")))
+            isValid = false;
         }
-        
-        const skills = [
-            "HTML", "CSS", "JavaScript", "React", "Vue", "Angular", "Node.js", "PHP", "Python", "Java", "C#", "UI Design",
-            "UX Design", "Figma", "Adobe XD", "Photoshop", "Illustrator", "InDesign", "WordPress", "SEO", "Content Writing",
-            "Social Media Marketing", "Google Ads", "Facebook Ads", "Email Marketing", "Project Management", "Agile", "Scrum",
-            "Git", "Responsive Design", "Bootstrap", "Tailwind CSS", "SASS", "LESS", "MySQL", "MongoDB", "REST API",
-            "GraphQL", "Docker", "AWS", "Google Cloud", "Azure"
-        ];
-        
-        document.getElementById('skillInput').addEventListener('input', function() {
-            const input = this.value.toLowerCase();
-            const suggestions = document.getElementById('skillSuggestions');
-            
-            if (input.length > 1) {
-                const matches = skills.filter(skill => skill.toLowerCase().includes(input));
-                if (matches.length > 0) {
-                    suggestions.innerHTML = matches.map(skill => 
-                        `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer dark:text-gray-200" onclick="addSkill('${skill}')">${skill}</div>`
-                    ).join('');
-                    suggestions.classList.remove('hidden');
+
+        if (step === 4) {
+          const positionsEl = document.querySelector("#step4 > div > p");
+          if (!document.querySelector('input[name="positions"]:checked')) {
+            isValid = false;
+            positionsEl.classList.add("text-red-500");
+          } else {
+            positionsEl.classList.remove("text-red-500");
+          }
+        }
+
+        if (step === 5) {
+          const selectedSkills =
+            document.getElementById("selectedSkills").children.length;
+          const skillRequiredPositions = [
+            "UI/UX Designer",
+            "Graphics Designer",
+            "Web Developer",
+            "Website Maintenance Specialist",
+          ];
+          let skillRequired = false;
+
+          skillRequiredPositions.forEach((pos) => {
+            if (
+              document.querySelector(
+                `input[name="positions"][value="${pos}"]:checked`
+              )
+            ) {
+              skillRequired = true;
+            }
+          });
+
+          const skillInputEl = document.getElementById("skillInput");
+          if (skillRequired && selectedSkills === 0) {
+            isValid = false;
+            skillInputEl.classList.add("border-red-500", "dark:border-red-500");
+          } else {
+            skillInputEl.classList.remove(
+              "border-red-500",
+              "dark:border-red-500"
+            );
+          }
+        }
+
+        if (step === 6) {
+          const uploadContainer = document.getElementById("uploadContainer");
+          if (!document.getElementById("cvUpload").files.length) {
+            isValid = false;
+            uploadContainer
+              .querySelector("label")
+              .classList.add("border-red-500", "dark:border-red-500");
+          } else {
+            uploadContainer
+              .querySelector("label")
+              .classList.remove("border-red-500", "dark:border-red-500");
+          }
+        }
+
+        return isValid;
+      }
+
+      const locations = {
+        Dhaka: [
+          "Dhaka",
+          "Gazipur",
+          "Narayanganj",
+          "Tangail",
+          "Manikganj",
+          "Munshiganj",
+        ],
+        Chittagong: [
+          "Chittagong",
+          "Cox's Bazar",
+          "Comilla",
+          "Feni",
+          "Brahmanbaria",
+        ],
+        Khulna: ["Khulna", "Jessore", "Satkhira", "Bagerhat"],
+        Sylhet: ["Sylhet", "Sunamganj", "Habiganj", "Moulvibazar"],
+        Rajshahi: ["Rajshahi", "Bogra", "Pabna", "Naogaon"],
+        Barisal: ["Barisal", "Patuakhali", "Bhola"],
+        Rangpur: ["Rangpur", "Dinajpur", "Gaibandha"],
+      };
+
+      const divisionSelect = document.getElementById("division");
+      const citySelect = document.getElementById("city");
+
+      for (const division in locations) {
+        const option = document.createElement("option");
+        option.value = division;
+        option.textContent = division;
+        divisionSelect.appendChild(option);
+      }
+
+      divisionSelect.addEventListener("change", function () {
+        const selectedDivision = this.value;
+        citySelect.innerHTML =
+          '<option value="" disabled selected>Select your city</option>';
+        citySelect.disabled = true;
+
+        if (selectedDivision) {
+          citySelect.disabled = false;
+          locations[selectedDivision].forEach((city) => {
+            const option = document.createElement("option");
+            option.value = city;
+            option.textContent = city;
+            citySelect.appendChild(option);
+          });
+        }
+      });
+
+      const studyFields = [
+        "Computer Science and Engineering",
+        "Electrical and Electronic Engineering",
+        "Civil Engineering",
+        "Mechanical Engineering",
+        "Business Administration",
+        "Marketing",
+        "Finance",
+        "Accounting",
+        "MBBS (Medicine)",
+        "Pharmacy",
+        "English Literature",
+        "Bengali Literature",
+        "Economics",
+        "Sociology",
+        "Law",
+        "Architecture",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+      ];
+
+      document
+        .getElementById("fieldOfStudy")
+        .addEventListener("input", function () {
+          const input = this.value.toLowerCase();
+          const suggestions = document.getElementById("studySuggestions");
+
+          if (input.length > 1) {
+            const matches = studyFields.filter((field) =>
+              field.toLowerCase().includes(input)
+            );
+            if (matches.length > 0) {
+              suggestions.innerHTML = matches
+                .map(
+                  (field) =>
+                    `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer dark:text-gray-200" onclick="selectStudyField('${field}')">${field}</div>`
+                )
+                .join("");
+              suggestions.classList.remove("hidden");
+            } else {
+              suggestions.classList.add("hidden");
+            }
+          } else {
+            suggestions.classList.add("hidden");
+          }
+        });
+
+      function selectStudyField(field) {
+        document.getElementById("fieldOfStudy").value = field;
+        document.getElementById("studySuggestions").classList.add("hidden");
+      }
+
+      const skills = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Vue",
+        "Angular",
+        "Node.js",
+        "PHP",
+        "Python",
+        "Java",
+        "C#",
+        "UI Design",
+        "UX Design",
+        "Figma",
+        "Adobe XD",
+        "Photoshop",
+        "Illustrator",
+        "InDesign",
+        "WordPress",
+        "SEO",
+        "Content Writing",
+        "Social Media Marketing",
+        "Google Ads",
+        "Facebook Ads",
+        "Email Marketing",
+        "Project Management",
+        "Agile",
+        "Scrum",
+        "Git",
+        "Responsive Design",
+        "Bootstrap",
+        "Tailwind CSS",
+        "SASS",
+        "LESS",
+        "MySQL",
+        "MongoDB",
+        "REST API",
+        "GraphQL",
+        "Docker",
+        "AWS",
+        "Google Cloud",
+        "Azure",
+      ];
+
+      document
+        .getElementById("skillInput")
+        .addEventListener("input", function () {
+          const input = this.value.toLowerCase();
+          const suggestions = document.getElementById("skillSuggestions");
+
+          if (input.length > 1) {
+            const matches = skills.filter((skill) =>
+              skill.toLowerCase().includes(input)
+            );
+            if (matches.length > 0) {
+              suggestions.innerHTML = matches
+                .map(
+                  (skill) =>
+                    `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer dark:text-gray-200" onclick="addSkill('${skill}')">${skill}</div>`
+                )
+                .join("");
+              suggestions.classList.remove("hidden");
+            } else {
+              suggestions.classList.add("hidden");
+            }
+          } else {
+            suggestions.classList.add("hidden");
+          }
+        });
+
+      function addSkill(skill) {
+        const selectedSkills = document.getElementById("selectedSkills");
+        const existingSkills = Array.from(selectedSkills.children).map((el) =>
+          el.querySelector("span").textContent.trim()
+        );
+
+        if (!existingSkills.includes(skill)) {
+          const skillTag = document.createElement("div");
+          skillTag.className =
+            "skill-tag bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm flex items-center";
+          skillTag.innerHTML = `<span>${skill}</span> <button type="button" onclick="removeSkill(this)" class="ml-2 text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"><i data-feather="x" class="w-3 h-3"></i></button>`;
+          selectedSkills.appendChild(skillTag);
+          feather.replace();
+        }
+        document.getElementById("skillInput").value = "";
+        document.getElementById("skillSuggestions").classList.add("hidden");
+      }
+
+      function removeSkill(button) {
+        button.parentElement.remove();
+      }
+
+      const cvUploadInput = document.getElementById("cvUpload");
+      const uploadContainer = document.getElementById("uploadContainer");
+      const fileInfoContainer = document.getElementById("fileInfo");
+      const fileNameSpan = document.getElementById("fileName");
+      const removeFileBtn = document.getElementById("removeFileBtn");
+
+      cvUploadInput.addEventListener("change", function () {
+        if (this.files.length > 0) {
+          fileNameSpan.textContent = this.files[0].name;
+          uploadContainer.classList.add("hidden");
+          fileInfoContainer.classList.remove("hidden");
+          feather.replace();
+        }
+      });
+
+      removeFileBtn.addEventListener("click", function () {
+        cvUploadInput.value = "";
+        fileInfoContainer.classList.add("hidden");
+        uploadContainer.classList.remove("hidden");
+        fileNameSpan.textContent = "";
+      });
+
+      document.addEventListener("click", function (e) {
+        if (
+          !document.getElementById("fieldOfStudy").contains(e.target) &&
+          !document.getElementById("studySuggestions").contains(e.target)
+        ) {
+          document.getElementById("studySuggestions").classList.add("hidden");
+        }
+
+        if (
+          !document.getElementById("skillInput").contains(e.target) &&
+          !document.getElementById("skillSuggestions").contains(e.target)
+        ) {
+          document.getElementById("skillSuggestions").classList.add("hidden");
+        }
+      });
+
+      // Styling for custom radio and checkboxes
+      const greenClasses = [
+        "border-green-500",
+        "dark:border-green-500",
+        "bg-green-50",
+        "dark:bg-green-900/50",
+      ];
+      const redClasses = [
+        "border-red-500",
+        "dark:border-red-500",
+        "bg-red-50",
+        "dark:bg-red-900/50",
+      ];
+
+      function handleRadioStyling() {
+        document
+          .querySelectorAll('#step3 input[type="radio"]')
+          .forEach((radio) => {
+            radio.addEventListener("change", (e) => {
+              const currentRadio = e.target;
+              const groupName = currentRadio.name;
+
+              const questionLabel =
+                currentRadio.closest(".grid").previousElementSibling;
+              questionLabel.classList.remove("text-red-500");
+
+              document
+                .querySelectorAll(`input[name="${groupName}"]`)
+                .forEach((r) => {
+                  const label = r.parentElement;
+                  label.classList.remove(...greenClasses, ...redClasses);
+                  if (r.value === "yes") {
+                    label
+                      .querySelector(".check-icon")
+                      .classList.add("opacity-0");
+                  } else {
+                    label.querySelector(".x-icon").classList.add("opacity-0");
+                  }
+                });
+
+              if (currentRadio.checked) {
+                const parentLabel = currentRadio.parentElement;
+                const otherLabel = parentLabel.parentElement.querySelector(
+                  `label:not([for="${parentLabel.getAttribute("for")}"])`
+                );
+                if (currentRadio.value === "yes") {
+                  parentLabel.classList.add(...greenClasses);
+                  parentLabel
+                    .querySelector(".check-icon")
+                    .classList.remove("opacity-0");
+                  parentLabel.parentElement
+                    .querySelector('input[value="no"]')
+                    .parentElement.classList.add("hidden");
                 } else {
-                    suggestions.classList.add('hidden');
+                  parentLabel.classList.add(...redClasses);
+                  parentLabel
+                    .querySelector(".x-icon")
+                    .classList.remove("opacity-0");
+                  parentLabel.parentElement
+                    .querySelector('input[value="yes"]')
+                    .parentElement.classList.add("hidden");
                 }
-            } else {
-                suggestions.classList.add('hidden');
-            }
-        });
-        
-        function addSkill(skill) {
-            const selectedSkills = document.getElementById('selectedSkills');
-            const existingSkills = Array.from(selectedSkills.children).map(el => el.querySelector('span').textContent.trim());
+              }
+              clearQuickQuestionsBtn.classList.remove("hidden");
+            });
+          });
+      }
 
-            if (!existingSkills.includes(skill)) {
-                const skillTag = document.createElement('div');
-                skillTag.className = 'skill-tag bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm flex items-center';
-                skillTag.innerHTML = `<span>${skill}</span> <button type="button" onclick="removeSkill(this)" class="ml-2 text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"><i data-feather="x" class="w-3 h-3"></i></button>`;
-                selectedSkills.appendChild(skillTag);
-                feather.replace();
-            }
-            document.getElementById('skillInput').value = '';
-            document.getElementById('skillSuggestions').classList.add('hidden');
-        }
-        
-        function removeSkill(button) {
-            button.parentElement.remove();
-        }
-        
-        const cvUploadInput = document.getElementById('cvUpload');
-        const uploadContainer = document.getElementById('uploadContainer');
-        const fileInfoContainer = document.getElementById('fileInfo');
-        const fileNameSpan = document.getElementById('fileName');
-        const removeFileBtn = document.getElementById('removeFileBtn');
+      const clearPositionBtn = document.getElementById("clearPosition");
+      const clearQuickQuestionsBtn = document.getElementById(
+        "clearQuickQuestions"
+      );
 
-        cvUploadInput.addEventListener('change', function() {
-            if (this.files.length > 0) {
-                fileNameSpan.textContent = this.files[0].name;
-                uploadContainer.classList.add('hidden');
-                fileInfoContainer.classList.remove('hidden');
-                feather.replace();
-            }
-        });
+      function handleCheckboxStyling() {
+        const positionLabels = document.querySelectorAll(
+          "#positionsContainer label"
+        );
+        document
+          .querySelectorAll('#step4 input[type="checkbox"]')
+          .forEach((checkbox) => {
+            checkbox.addEventListener("change", (e) => {
+              const currentCheckbox = e.target;
+              const parentLabel = currentCheckbox.parentElement;
+              const icon = parentLabel.querySelector(".check-icon");
 
-        removeFileBtn.addEventListener('click', function() {
-            cvUploadInput.value = '';
-            fileInfoContainer.classList.add('hidden');
-            uploadContainer.classList.remove('hidden');
-            fileNameSpan.textContent = '';
-        });
-        
-        document.addEventListener('click', function(e) {
-            if (!document.getElementById('fieldOfStudy').contains(e.target) && !document.getElementById('studySuggestions').contains(e.target)) {
-                document.getElementById('studySuggestions').classList.add('hidden');
-            }
-            
-            if (!document.getElementById('skillInput').contains(e.target) && !document.getElementById('skillSuggestions').contains(e.target)) {
-                document.getElementById('skillSuggestions').classList.add('hidden');
-            }
-        });
+              if (currentCheckbox.checked) {
+                parentLabel.classList.add(...greenClasses);
+                if (icon) icon.classList.remove("opacity-0");
 
-        // Styling for custom radio and checkboxes
-        const greenClasses = ['border-green-500', 'dark:border-green-500', 'bg-green-50', 'dark:bg-green-900/50'];
-        const redClasses = ['border-red-500', 'dark:border-red-500', 'bg-red-50', 'dark:bg-red-900/50'];
-
-        function handleRadioStyling() {
-            document.querySelectorAll('#step3 input[type="radio"]').forEach(radio => {
-                radio.addEventListener('change', (e) => {
-                    const currentRadio = e.target;
-                    const groupName = currentRadio.name;
-                    
-                    const questionLabel = currentRadio.closest('.grid').previousElementSibling;
-                    questionLabel.classList.remove('text-red-500');
-                    
-                    document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
-                        const label = r.parentElement;
-                        label.classList.remove(...greenClasses, ...redClasses);
-                        if(r.value === 'yes') {
-                            label.querySelector('.check-icon').classList.add('opacity-0');
-                        } else {
-                            label.querySelector('.x-icon').classList.add('opacity-0');
-                        }
-                    });
-                    
-                    if (currentRadio.checked) {
-                        const parentLabel = currentRadio.parentElement;
-                        const otherLabel = parentLabel.parentElement.querySelector(`label:not([for="${parentLabel.getAttribute('for')}"])`);
-                         if(currentRadio.value === 'yes') {
-                            parentLabel.classList.add(...greenClasses);
-                            parentLabel.querySelector('.check-icon').classList.remove('opacity-0');
-                            parentLabel.parentElement.querySelector('input[value="no"]').parentElement.classList.add('hidden');
-                        } else {
-                            parentLabel.classList.add(...redClasses);
-                            parentLabel.querySelector('.x-icon').classList.remove('opacity-0');
-                             parentLabel.parentElement.querySelector('input[value="yes"]').parentElement.classList.add('hidden');
-                        }
-                    }
+                positionLabels.forEach((label) => {
+                  if (label !== parentLabel) {
+                    label.classList.add("hidden");
+                  }
                 });
+                clearPositionBtn.classList.remove("hidden");
+              } else {
+                // Should not happen with this logic but for safety
+                parentLabel.classList.remove(...greenClasses);
+                if (icon) icon.classList.add("opacity-0");
+              }
             });
-        }
-        
-        const clearPositionBtn = document.getElementById('clearPosition');
+          });
+      }
 
-        function handleCheckboxStyling() {
-            const positionLabels = document.querySelectorAll('#positionsContainer label');
-            document.querySelectorAll('#step4 input[type="checkbox"]').forEach(checkbox => {
-                checkbox.addEventListener('change', (e) => {
-                    const currentCheckbox = e.target;
-                    const parentLabel = currentCheckbox.parentElement;
-                    const icon = parentLabel.querySelector('.check-icon');
+      clearPositionBtn.addEventListener("click", () => {
+        document
+          .querySelectorAll("#positionsContainer label")
+          .forEach((label) => {
+            label.classList.remove("hidden");
+            label.classList.remove(...greenClasses);
+            label.querySelector(".check-icon").classList.add("opacity-0");
+            label.querySelector("input").checked = false;
+          });
+        clearPositionBtn.classList.add("hidden");
+      });
 
-                    if (currentCheckbox.checked) {
-                        parentLabel.classList.add(...greenClasses);
-                        if(icon) icon.classList.remove('opacity-0');
+      clearQuickQuestionsBtn.addEventListener("click", () => {
+        document.querySelectorAll("#step3 .grid").forEach((grid) => {
+          const radioInputs = grid.querySelectorAll('input[type="radio"]');
+          const questionLabel = grid.previousElementSibling;
+          questionLabel.classList.remove("text-red-500");
 
-                        positionLabels.forEach(label => {
-                            if(label !== parentLabel) {
-                                label.classList.add('hidden');
-                            }
-                        });
-                        clearPositionBtn.classList.remove('hidden');
-
-                    } else { // Should not happen with this logic but for safety
-                        parentLabel.classList.remove(...greenClasses);
-                        if(icon) icon.classList.add('opacity-0');
-                    }
-                });
-            });
-        }
-        
-        clearPositionBtn.addEventListener('click', () => {
-             document.querySelectorAll('#positionsContainer label').forEach(label => {
-                label.classList.remove('hidden');
-                label.classList.remove(...greenClasses);
-                label.querySelector('.check-icon').classList.add('opacity-0');
-                label.querySelector('input').checked = false;
-            });
-            clearPositionBtn.classList.add('hidden');
+          radioInputs.forEach((radio) => {
+            radio.checked = false;
+            const parentLabel = radio.parentElement;
+            parentLabel.classList.remove(
+              ...greenClasses,
+              ...redClasses,
+              "hidden"
+            );
+            const checkIcon = parentLabel.querySelector(".check-icon");
+            const xIcon = parentLabel.querySelector(".x-icon");
+            if (checkIcon) checkIcon.classList.add("opacity-0");
+            if (xIcon) xIcon.classList.add("opacity-0");
+          });
         });
+        clearQuickQuestionsBtn.classList.add("hidden");
+      });
 
-        handleRadioStyling();
-        handleCheckboxStyling();
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const hash = window.location.hash;
-            if(hash.includes('?job=')) {
-                const urlParams = new URLSearchParams(hash.substring(hash.indexOf('?')));
-                const jobTitle = urlParams.get('job');
-                
-                if(jobTitle) {
-                    const decodedJobTitle = decodeURIComponent(jobTitle.replace(/\+/g, ' '));
-                    const checkbox = document.querySelector(`input[name="positions"][value="${decodedJobTitle}"]`);
-                    if (checkbox) {
-                        checkbox.checked = true;
-                        checkbox.dispatchEvent(new Event('change'));
-                        
-                        document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
+      handleRadioStyling();
+      handleCheckboxStyling();
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const hash = window.location.hash;
+        if (hash.includes("?job=")) {
+          const urlParams = new URLSearchParams(
+            hash.substring(hash.indexOf("?"))
+          );
+          const jobTitle = urlParams.get("job");
+
+          if (jobTitle) {
+            const decodedJobTitle = decodeURIComponent(
+              jobTitle.replace(/\+/g, " ")
+            );
+            const checkbox = document.querySelector(
+              `input[name="positions"][value="${decodedJobTitle}"]`
+            );
+            if (checkbox) {
+              checkbox.checked = true;
+              checkbox.dispatchEvent(new Event("change"));
+
+              document
+                .getElementById("application-form")
+                .scrollIntoView({ behavior: "smooth" });
             }
-
-            document.querySelectorAll('input[required], select[required]').forEach(el => {
-                el.addEventListener('input', () => checkFieldValidity(el));
-                el.addEventListener('change', () => checkFieldValidity(el));
-            });
-        });
-
-        function checkFieldValidity(el) {
-            const parent = el.closest('.relative');
-            if(!parent) return true;
-
-            const successIcon = parent.querySelector('.success-icon');
-            const errorIcon = parent.querySelector('.error-icon');
-            let isValid = true;
-            
-            if (!el.value || el.value.trim() === '') {
-                isValid = false;
-            } else if (el.id === 'email' && !el.value.toLowerCase().endsWith('@gmail.com')) {
-                isValid = false;
-            }
-
-            if(isValid) {
-                el.classList.remove('border-red-500', 'dark:border-red-500');
-                el.classList.add('border-green-500', 'dark:border-green-500');
-                if(successIcon) successIcon.classList.remove('hidden');
-                if(errorIcon) errorIcon.classList.add('hidden');
-            } else {
-                el.classList.add('border-red-500', 'dark:border-red-500');
-                el.classList.remove('border-green-500', 'dark:border-green-500');
-                if(successIcon) successIcon.classList.add('hidden');
-                if(errorIcon) errorIcon.classList.remove('hidden');
-            }
-            return isValid;
+          }
         }
+
+        document
+          .querySelectorAll("input[required], select[required]")
+          .forEach((el) => {
+            el.addEventListener("input", () => checkFieldValidity(el));
+            el.addEventListener("change", () => checkFieldValidity(el));
+          });
+      });
+
+      function checkFieldValidity(el) {
+        const parent = el.closest(".relative");
+        if (!parent) return true;
+
+        const successIcon = parent.querySelector(".success-icon");
+        const errorIcon = parent.querySelector(".error-icon");
+        let isValid = true;
+
+        if (!el.value || el.value.trim() === "") {
+          isValid = false;
+        } else if (
+          el.id === "email" &&
+          !el.value.toLowerCase().endsWith("@gmail.com")
+        ) {
+          isValid = false;
+        }
+
+        if (isValid) {
+          el.classList.remove("border-red-500", "dark:border-red-500");
+          el.classList.add("border-green-500", "dark:border-green-500");
+          if (successIcon) successIcon.classList.remove("hidden");
+          if (errorIcon) errorIcon.classList.add("hidden");
+        } else {
+          el.classList.add("border-red-500", "dark:border-red-500");
+          el.classList.remove("border-green-500", "dark:border-green-500");
+          if (successIcon) successIcon.classList.add("hidden");
+          if (errorIcon) errorIcon.classList.remove("hidden");
+        }
+        return isValid;
+      }
     </script>
     <script>
       tailwind.config = { darkMode: "class" };
     </script>
   </body>
 </html>
-
