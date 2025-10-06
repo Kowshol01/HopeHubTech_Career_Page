@@ -6,19 +6,7 @@
     <title>Job Details - HopeHubTech</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-
-    <script>
-      // This script ensures the page respects the system's dark mode preference
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
       /* Custom style for prose list items */
       .prose ul > li::before {
@@ -33,8 +21,52 @@
   <body
     class="bg-gray-50 dark:bg-black text-gray-800 dark:text-gray-200 font-sans antialiased transition-colors duration-300"
   >
+    <nav class="absolute top-4 right-4 z-10">
+      <div class="relative inline-block">
+        <button
+          id="theme-toggle"
+          aria-label="Toggle theme"
+          class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+        >
+          <i
+            id="sun-icon"
+            data-feather="sun"
+            class="hidden w-5 h-5 text-gray-800 dark:text-gray-300"
+          ></i>
+          <i
+            id="moon-icon"
+            data-feather="moon"
+            class="w-5 h-5 text-gray-800 dark:text-gray-300"
+          ></i>
+        </button>
+        <div
+          id="theme-menu"
+          class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-50"
+        >
+          <button
+            data-theme="system"
+            class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            System
+          </button>
+          <button
+            data-theme="light"
+            class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            Light
+          </button>
+          <button
+            data-theme="dark"
+            class="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            Dark
+          </button>
+        </div>
+      </div>
+    </nav>
+
     <main class="container mx-auto px-6 py-12 md:py-20">
-      <div class="max-w-5xl mx-auto mb-12">
+      <div class="max-w-6xl mx-auto mb-12">
         <div class="mb-8">
           <a
             href="index.html#open-positions"
@@ -51,14 +83,23 @@
           <!-- Job Title Loads Here -->
         </h1>
         <div
-          id="job-meta"
           class="flex flex-wrap items-center text-gray-500 dark:text-gray-400 divide-x divide-gray-200 dark:divide-gray-700"
         >
-          <!-- Job Meta Info Loads Here -->
+          <div id="job-location-container" class="flex items-center gap-2 pr-4">
+            <i data-feather="map-pin" class="w-5 h-5"></i>
+            <span id="job-location"><!-- Job Location Loads Here --></span>
+          </div>
+          <div
+            id="job-department-container"
+            class="flex items-center gap-2 px-4"
+          >
+            <i data-feather="briefcase" class="w-5 h-5"></i>
+            <span id="job-department"><!-- Job Department Loads Here --></span>
+          </div>
         </div>
       </div>
 
-      <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div
           class="lg:col-span-2 bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-800"
         >
@@ -81,6 +122,7 @@
                 Ready to Make an Impact?
               </h3>
               <a
+                id="apply-now-link"
                 href="index.html#application-form"
                 class="w-full inline-block bg-green-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-600 shadow-lg hover:shadow-green-500/20"
               >
@@ -122,216 +164,242 @@
         </div>
       </div>
     </main>
-
     <script>
-      const jobDetails = {
-        "ui-ux-design": {
+      // Initialize Feather Icons
+      feather.replace();
+
+      // --- Theme toggle functionality ---
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeMenu = document.getElementById("theme-menu");
+      const sunIcon = document.getElementById("sun-icon");
+      const moonIcon = document.getElementById("moon-icon");
+
+      themeToggle.addEventListener("click", () =>
+        themeMenu.classList.toggle("hidden")
+      );
+
+      document.querySelectorAll("#theme-menu button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const theme = button.dataset.theme;
+          if (theme === "system") {
+            localStorage.removeItem("theme");
+          } else {
+            localStorage.setItem("theme", theme);
+          }
+          updateTheme();
+          themeMenu.classList.add("hidden");
+        });
+      });
+
+      function updateTheme() {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          document.documentElement.classList.remove("dark");
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
+      }
+
+      updateTheme();
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", updateTheme);
+
+      const jobData = {
+        "ui-ux-designer": {
           title: "UI/UX Designer",
           location: "Dhaka (On-site)",
           department: "Design",
           description: `
-                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
-                    <p>As a UI/UX Designer at HopeHubTech, you will be at the forefront of creating intuitive and visually compelling digital experiences. You are a problem-solver and a creative thinker who is passionate about understanding user needs and translating them into beautiful, functional designs.</p>
-                    <p>You will work closely with product managers and engineers to shape our products, from initial concept to final high-fidelity mockups. Your work will directly impact how users interact with our technology, making it more accessible and enjoyable.</p>
-                    <h3>The Opportunity: Your Impact at HopeHubTech 🎨</h3>
-                    <ul>
-                        <li><strong>User-Centric Design:</strong> Conduct user research, create user personas, and map user journeys to inform your design decisions.</li>
-                        <li><strong>Wireframing & Prototyping:</strong> Develop wireframes, user flows, and interactive prototypes to explore and validate design concepts.</li>
-                        <li><strong>Visual Design:</strong> Craft pixel-perfect mockups and design systems that align with our brand identity while ensuring usability and accessibility.</li>
-                        <li><strong>Collaboration:</strong> Partner with cross-functional teams to ensure your designs are implemented to the highest standard.</li>
-                    </ul>
-                    <h3>Who You Are: The Skills You Bring 💡</h3>
-                    <ul>
-                        <li>2+ years of professional UI/UX design experience with a strong portfolio showcasing your work.</li>
-                        <li>Proficiency in design tools like Figma, Sketch, or Adobe XD.</li>
-                        <li>Solid understanding of user-centered design principles, accessibility standards, and interaction design.</li>
-                        <li>Excellent visual design skills with a keen eye for typography, color, and layout.</li>
-                    </ul>
-                `,
+            <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+            <p>We are seeking a talented and passionate UI/UX Designer to create amazing user experiences. The ideal candidate should have an eye for clean and artful design, possess superior UI/UX skills and be able to translate high-level requirements into interaction flows and artifacts, and transform them into beautiful, intuitive, and functional user interfaces.</p>
+            <h3>Responsibilities:</h3>
+            <ul>
+              <li>Collaborate with product management and engineering to define and implement innovative solutions for the product direction, visuals and experience.</li>
+              <li>Execute all visual design stages from concept to final hand-off to engineering.</li>
+              <li>Create wireframes, storyboards, user flows, process flows and site maps to effectively communicate interaction and design ideas.</li>
+              <li>Conduct user research and evaluate user feedback.</li>
+            </ul>
+            <h3>Requirements:</h3>
+            <ul>
+              <li>Proven UI/UX design experience with a strong portfolio.</li>
+              <li>Solid experience in creating wireframes, storyboards, user flows, process flows and site maps.</li>
+              <li>Proficiency in Figma, Sketch, Adobe XD, or other visual design and wire-framing tools.</li>
+              <li>Excellent visual design skills with sensitivity to user-system interaction.</li>
+            </ul>
+          `,
         },
-        "graphics-design": {
+        "graphics-designer": {
           title: "Graphics Designer",
           location: "Remote",
           department: "Design",
           description: `
-                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
-                    <p>HopeHubTech is seeking a creative and versatile Graphics Designer to join our marketing and branding team. In this role, you will be the visual storyteller for our company, creating compelling graphics for digital campaigns, social media, web assets, and marketing materials.</p>
-                    <p>You have a passion for brand identity and can translate complex ideas into simple, powerful visuals. This is a fully remote position, offering you the flexibility to create from wherever you are inspired.</p>
-                    <h3>The Opportunity: Your Impact at HopeHubTech ✨</h3>
-                    <ul>
-                        <li><strong>Brand Visuals:</strong> Design a wide range of materials including social media graphics, ad creatives, infographics, and website visuals that align with our brand.</li>
-                        <li><strong>Marketing Campaigns:</strong> Collaborate with the marketing team to create visually stunning assets for campaigns that drive engagement and conversions.</li>
-                        <li><strong>Creative Concepts:</strong> Brainstorm and develop new creative concepts for branding and promotional activities.</li>
-                        <li><strong>Asset Management:</strong> Organize and maintain a library of design assets for the company.</li>
-                    </ul>
-                    <h3>Who You Are: The Skills You Bring 💡</h3>
-                    <ul>
-                        <li>2+ years of experience in graphic design, with a strong portfolio of digital and print work.</li>
-                        <li>Expert proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign).</li>
-                        <li>A strong understanding of branding, typography, and color theory.</li>
-                        <li>Ability to work independently in a remote environment and manage multiple projects simultaneously.</li>
-                    </ul>
-                `,
+            <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+            <p>We're looking for a creative Graphics Designer to produce high-quality visual content. You will work on a variety of products, including websites, social media, corporate identity etc. and you will cooperate with our marketing and sales team.</p>
+            <h3>Responsibilities:</h3>
+            <ul>
+              <li>Prepare rough drafts and present ideas.</li>
+              <li>Develop illustrations, logos and other designs using software or by hand.</li>
+              <li>Use the appropriate colors and layouts for each graphic.</li>
+              <li>Work with copywriters and creative director to produce final design.</li>
+            </ul>
+            <h3>Requirements:</h3>
+            <ul>
+              <li>A strong portfolio of illustrations or other graphics.</li>
+              <li>Familiarity with design software and technologies (such as InDesign, Illustrator, Photoshop).</li>
+              <li>A keen eye for aesthetics and details.</li>
+              <li>Ability to work methodically and meet deadlines.</li>
+            </ul>
+          `,
         },
         "marketing-specialist": {
           title: "Marketing Specialist",
           location: "Dhaka (Hybrid)",
           department: "Marketing",
           description: `
-                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
-                    <p>We are looking for a data-driven and creative Marketing Specialist to help grow the HopeHubTech brand. You will be responsible for developing and executing marketing strategies that increase brand awareness, drive user acquisition, and boost engagement.</p>
-                    <p>You are a master of digital marketing channels and understand how to create and optimize campaigns that deliver results. This hybrid role offers a mix of in-office collaboration in Dhaka and remote work.</p>
-                    <h3>The Opportunity: Your Impact at HopeHubTech 📈</h3>
-                    <ul>
-                        <li><strong>Campaign Management:</strong> Plan, execute, and manage digital marketing campaigns across various channels, including social media, email, and paid advertising.</li>
-                        <li><strong>Content Creation:</strong> Work with our team to create compelling content such as blog posts, case studies, and social media updates.</li>
-                        <li><strong>SEO & Analytics:</strong> Monitor and improve our website's SEO performance, and use analytics tools to track campaign success and identify areas for improvement.</li>
-                        <li><strong>Market Research:</strong> Stay up-to-date with the latest marketing trends and conduct market research to identify new opportunities.</li>
-                    </ul>
-                    <h3>Who You Are: The Skills You Bring 💡</h3>
-                    <ul>
-                        <li>3+ years of experience in a digital marketing role.</li>
-                        <li>Proven experience with SEO, SEM, social media marketing, and email marketing.</li>
-                        <li>Strong analytical skills and experience with tools like Google Analytics.</li>
-                        <li>Excellent written and verbal communication skills.</li>
-                    </ul>
-                `,
+            <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+            <p>We are looking for an enthusiastic Marketing Specialist to help us in our overall marketing efforts. You will be an integral part of the development and execution of marketing plans to reach targets from brand awareness to product promotion.</p>
+            <h3>Responsibilities:</h3>
+            <ul>
+                <li>Conduct market research to find answers about consumer requirements, habits and trends.</li>
+                <li>Brainstorm and develop ideas for creative marketing campaigns.</li>
+                <li>Assist in outbound or inbound marketing activities by demonstrating expertise in various areas (content development and optimization, advertising, events planning etc.).</li>
+                <li>Liaise with external vendors to execute promotional events and campaigns.</li>
+            </ul>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>Proven experience as marketing specialist or similar role.</li>
+                <li>Thorough understanding of marketing elements (including traditional and digital marketing such as SEO/Social media etc.) and market research methods.</li>
+                <li>Solid computer skills, including MS Office, marketing software (Adobe Creative Suite & CRM) and applications (Web analytics, Google Adwords etc.).</li>
+                <li>Well-organized and detail oriented.</li>
+            </ul>
+          `,
         },
-        "web-development": {
+        "web-developer": {
           title: "Web Developer",
           location: "Remote",
           department: "Engineering",
           description: `
-                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
-                    <p>As a Web Developer at HopeHubTech, you will be responsible for building and maintaining the websites and web applications that represent our brand to the world. You are a skilled coder with a passion for creating clean, efficient, and responsive web experiences.</p>
-                    <p>This is a fantastic opportunity for a developer who wants to work with modern web technologies in a fully remote, supportive environment. You will collaborate with designers and marketers to bring our digital presence to life.</p>
-                    <h3>The Opportunity: Your Impact at HopeHubTech 💻</h3>
-                    <ul>
-                        <li><strong>Website Development:</strong> Develop, test, and deploy new websites and features using modern technologies like HTML, CSS, and JavaScript.</li>
-                        <li><strong>CMS Management:</strong> Work with content management systems (like WordPress) to build and manage our web properties.</li>
-                        <li><strong>Performance Optimization:</strong> Ensure our websites are fast, secure, and optimized for all devices.</li>
-                        <li><strong>Collaboration:</strong> Work closely with our design and marketing teams to implement new features and ensure a consistent brand experience.</li>
-                    </ul>
-                    <h3>Who You Are: The Skills You Bring 💡</h3>
-                    <ul>
-                        <li>2+ years of professional web development experience.</li>
-                        <li>Strong proficiency in HTML, CSS, and JavaScript. Experience with a modern framework (like React or Vue.js) is a plus.</li>
-                        <li>Experience with WordPress or another major CMS.</li>
-                        <li>A good understanding of web performance, security, and SEO best practices.</li>
-                    </ul>
-                `,
+            <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+            <p>We are looking for a skilled Web Developer who will be responsible for developing and/or designing websites for our company. You will be working alongside a team of other developers in creating, maintaining, and updating our websites.</p>
+            <h3>Responsibilities:</h3>
+            <ul>
+                <li>Website and software application designing, building, or maintaining.</li>
+                <li>Using scripting or authoring languages, management tools, content creation tools, applications, and digital media.</li>
+                <li>Conferring with teams to resolve conflicts, prioritize needs, develop content criteria, or choose solutions.</li>
+                <li>Directing or performing Website updates.</li>
+            </ul>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>Proven working experience in web programming.</li>
+                <li>Top-notch programming skills and in-depth knowledge of modern HTML/CSS and JavaScript.</li>
+                <li>A solid understanding of how web applications work including security, session management, and best development practices.</li>
+                <li>Aggressive problem diagnosis and creative problem solving skills.</li>
+            </ul>
+          `,
         },
-        "website-maintenance": {
+        "website-maintenance-specialist": {
           title: "Website Maintenance Specialist",
           location: "Remote",
           department: "Engineering",
           description: `
-                     <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
-                    <p>We are seeking a diligent and detail-oriented Website Maintenance Specialist to ensure our web properties run smoothly and securely. Your primary responsibility will be the ongoing health, performance, and security of our company websites.</p>
-                    <p>You are a proactive problem-solver who enjoys troubleshooting and ensuring everything is up-to-date. This fully remote role is critical to maintaining our professional online presence and ensuring a seamless user experience.</p>
-                    <h3>The Opportunity: Your Impact at HopeHubTech 🛠️</h3>
-                    <ul>
-                        <li><strong>Regular Updates:</strong> Perform regular updates of our CMS (WordPress), themes, and plugins to ensure security and functionality.</li>
-                        <li><strong>Performance Monitoring:</strong> Monitor website performance, uptime, and loading speeds, and take action to optimize them.</li>
-                        <li><strong>Security & Backups:</strong> Implement security best practices and manage regular backups of our websites to prevent data loss.</li>
-                        <li><strong>Troubleshooting:</strong> Quickly identify and resolve any technical issues, bugs, or user-reported problems.</li>
-                    </ul>
-                    <h3>Who You Are: The Skills You Bring 💡</h3>
-                    <ul>
-                        <li>1+ years of experience managing and maintaining WordPress websites.</li>
-                        <li>Familiarity with web hosting environments, cPanel, and FTP.</li>
-                        <li>A solid understanding of website security principles.</li>
-                        <li>Strong problem-solving skills and the ability to work independently.</li>
-                    </ul>
-                `,
+             <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+            <p>We're seeking a detail-oriented Website Maintenance Specialist to ensure our websites are running smoothly and are up-to-date. You will be responsible for regular updates, troubleshooting issues, and implementing security measures.</p>
+            <h3>Responsibilities:</h3>
+            <ul>
+                <li>Regularly update website content, plugins, and themes.</li>
+                <li>Monitor website performance and uptime.</li>
+                <li>Troubleshoot and resolve website issues, including broken links, bugs, and server errors.</li>
+                <li>Implement and maintain website security measures and perform regular backups.</li>
+            </ul>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>Proven experience in website maintenance, particularly with WordPress or similar CMS.</li>
+                <li>Good understanding of front-end technologies, including HTML5, CSS3, and JavaScript.</li>
+                <li>Experience with website monitoring tools and backup procedures.</li>
+                <li>Strong problem-solving skills and attention to detail.</li>
+            </ul>
+          `,
         },
         "virtual-personal-assistant": {
           title: "Virtual Personal Assistant",
           location: "Remote",
           department: "Admin",
           description: `
-                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
-                    <p>HopeHubTech is looking for a highly organized and efficient Virtual Personal Assistant to provide administrative support to our leadership team. You will be responsible for managing schedules, organizing meetings, handling correspondence, and performing various administrative tasks.</p>
-                    <p>You are a master of organization and communication, able to anticipate needs and proactively manage tasks in a remote setting. Your support will be crucial in helping our team stay focused and productive.</p>
-                    <h3>The Opportunity: Your Impact at HopeHubTech 🗓️</h3>
-                    <ul>
-                        <li><strong>Schedule Management:</strong> Manage calendars, schedule appointments, and coordinate meetings for our executive team.</li>
-                        <li><strong>Communication:</strong> Handle emails, phone calls, and other communications on behalf of the team.</li>
-                        <li><strong>Task Coordination:</strong> Assist with project management, track deadlines, and prepare documents and presentations.</li>
-                        <li><strong>Administrative Support:</strong> Handle travel arrangements, expense reports, and other administrative duties as needed.</li>
-                    </ul>
-                    <h3>Who You Are: The Skills You Bring 💡</h3>
-                    <ul>
-                        <li>Proven experience as a Virtual Assistant, Personal Assistant, or similar role.</li>
-                        <li>Excellent organizational and time management skills.</li>
-                        <li>Strong written and verbal communication skills in English and Bengali.</li>
-                        <li>Proficiency with office software (like Google Workspace or Microsoft Office) and calendar management tools.</li>
-                    </ul>
-                `,
+            <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+            <p>We are hiring a Virtual Personal Assistant to provide administrative support to our team while working remotely. You will handle administrative projects and deliver high-quality work under minimum supervision.</p>
+            <h3>Responsibilities:</h3>
+            <ul>
+                <li>Manage calendars and schedule appointments.</li>
+                <li>Handle email correspondence and phone calls.</li>
+                <li>Prepare reports, presentations, and other documents.</li>
+                <li>Perform various administrative tasks, including data entry and research.</li>
+            </ul>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>Proven experience as a Virtual Assistant or relevant role.</li>
+                <li>Familiarity with current technologies, like desktop sharing, cloud services, and VoIP.</li>
+                <li>Excellent verbal and written communication skills.</li>
+                <li>Proficiency in MS Office and strong organizational skills.</li>
+            </ul>
+          `,
         },
-        "virtual-social-media-marketing": {
+        "virtual-social-media-marketer": {
           title: "Virtual Social Media Marketer",
           location: "Remote",
           department: "Marketing",
           description: `
-                    <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
-                    <p>We are searching for a creative and savvy Virtual Social Media Marketer to manage and grow HopeHubTech's social media presence. You will be responsible for creating engaging content, managing our social channels, and running campaigns to build our online community.</p>
-                    <p>You live and breathe social media and understand the nuances of different platforms. This is a fully remote role perfect for someone who is passionate about building a brand and connecting with an audience online.</p>
-                    <h3>The Opportunity: Your Impact at HopeHubTech 📱</h3>
-                    <ul>
-                        <li><strong>Content Creation:</strong> Develop and execute a content strategy, creating engaging posts, stories, and videos for platforms like Facebook, LinkedIn, and Twitter.</li>
-                        <li><strong>Community Management:</strong> Interact with our followers, respond to comments and messages, and foster a positive online community.</li>
-                        <li><strong>Campaigns & Analytics:</strong> Plan and run social media campaigns, track their performance using analytics tools, and provide regular reports.</li>
-                        <li><strong>Trend Monitoring:</strong> Stay on top of the latest social media trends and best practices to keep our strategy fresh and effective.</li>
-                    </ul>
-                    <h3>Who You Are: The Skills You Bring 💡</h3>
-                    <ul>
-                        <li>1+ years of experience managing social media for a business or brand.</li>
-                        <li>A strong understanding of major social media platforms and their algorithms.</li>
-                        <li>Excellent copywriting and content creation skills.</li>
-                        <li>Experience with social media scheduling and analytics tools.</li>
-                    </ul>
-                `,
+            <h2 class="!text-2xl !font-bold !mb-4">About the Role</h2>
+            <p>We are looking for a tech-savvy Virtual Social Media Marketer to manage our social media accounts. You will be responsible for creating original text and video content, managing posts, and responding to followers.</p>
+            <h3>Responsibilities:</h3>
+            <ul>
+                <li>Design and implement social media strategy to align with business goals.</li>
+                <li>Generate, edit, publish, and share engaging content daily (e.g., original text, photos, videos, and news).</li>
+                <li>Monitor SEO and web traffic metrics.</li>
+                <li>Communicate with followers, respond to queries in a timely manner and monitor customer reviews.</li>
+            </ul>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>Proven work experience as a Social media marketer.</li>
+                <li>Hands-on experience in content management.</li>
+                <li>Excellent copywriting skills.</li>
+                <li>Ability to deliver creative content (text, image and video).</li>
+            </ul>
+          `,
         },
       };
 
       document.addEventListener("DOMContentLoaded", () => {
         const params = new URLSearchParams(window.location.search);
-        const jobKey = params.get("job") || "senior-frontend-engineer"; // Default to a role if none is specified
-        const job = jobDetails[jobKey];
-
-        const titleEl = document.getElementById("job-title");
-        const metaEl = document.getElementById("job-meta");
-        const descriptionEl = document.getElementById("job-description");
+        const jobId = params.get("job");
+        const job = jobData[jobId];
 
         if (job) {
+          document.getElementById("job-title").textContent = job.title;
+          document.getElementById("job-location").textContent = job.location;
+          document.getElementById("job-department").textContent =
+            job.department;
+          document.getElementById("job-description").innerHTML =
+            job.description;
           document.title = `Job Details: ${job.title} - HopeHubTech`;
-          titleEl.textContent = job.title;
+          document.getElementById("apply-now-link").href =
+            `index.html#application-form?job=${encodeURIComponent(job.title)}`;
 
-          metaEl.innerHTML = `
-                    <div class="flex items-center gap-2 pr-4">
-                        <i data-feather="map-pin" class="w-5 h-5"></i>
-                        <span>${job.location}</span>
-                    </div>
-                    <div class="flex items-center gap-2 px-4">
-                        <i data-feather="briefcase" class="w-5 h-5"></i>
-                        <span>${job.department} Department</span>
-                    </div>
-                `;
-
-          descriptionEl.innerHTML = job.description;
+          feather.replace(); // Re-run feather icons after content is added
         } else {
-          titleEl.textContent = "Position Not Found";
-          descriptionEl.innerHTML =
-            "<p>The job position you are looking for could not be found. Please return to the careers page to see all available positions.</p>";
+          document.getElementById("job-title").textContent =
+            "Position Not Found";
+          document.getElementById("job-description").innerHTML =
+            "<p>The job you are looking for does not exist or has been removed.</p>";
         }
-
-        feather.replace();
       });
-    </script>
-    <script>
-      // Initialize Feather Icons
-      feather.replace();
     </script>
   </body>
 </html>
