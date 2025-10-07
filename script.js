@@ -353,33 +353,35 @@ const studyFields = [
   "Mathematics",
 ];
 
-document.getElementById("fieldOfStudy").addEventListener("input", function () {
-  const input = this.value.toLowerCase();
-  const suggestions = document.getElementById("studySuggestions");
+const fieldOfStudyInput = document.getElementById("fieldOfStudy");
+const studySuggestions = document.getElementById("studySuggestions");
 
+fieldOfStudyInput.addEventListener("input", function () {
+  const input = this.value.toLowerCase();
   if (input.length > 1) {
     const matches = studyFields.filter((field) =>
       field.toLowerCase().includes(input)
     );
     if (matches.length > 0) {
-      suggestions.innerHTML = matches
+      studySuggestions.innerHTML = matches
         .map(
           (field) =>
-            `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer dark:text-gray-200" onclick="selectStudyField('${field}')">${field}</div>`
+            `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer" onclick="selectStudyField('${field}')">${field}</div>`
         )
         .join("");
-      suggestions.classList.remove("hidden");
+      studySuggestions.classList.remove("hidden");
     } else {
-      suggestions.classList.add("hidden");
+      studySuggestions.classList.add("hidden");
     }
   } else {
-    suggestions.classList.add("hidden");
+    studySuggestions.classList.add("hidden");
   }
 });
 
 function selectStudyField(field) {
-  document.getElementById("fieldOfStudy").value = field;
-  document.getElementById("studySuggestions").classList.add("hidden");
+  fieldOfStudyInput.value = field;
+  studySuggestions.classList.add("hidden");
+  checkFieldValidity(fieldOfStudyInput);
 }
 
 const skills = [
@@ -427,27 +429,38 @@ const skills = [
   "Azure",
 ];
 
-document.getElementById("skillInput").addEventListener("input", function () {
-  const input = this.value.toLowerCase();
-  const suggestions = document.getElementById("skillSuggestions");
+const skillInput = document.getElementById("skillInput");
+const skillSuggestions = document.getElementById("skillSuggestions");
 
+skillInput.addEventListener("input", function () {
+  const input = this.value.toLowerCase();
   if (input.length > 1) {
     const matches = skills.filter((skill) =>
       skill.toLowerCase().includes(input)
     );
     if (matches.length > 0) {
-      suggestions.innerHTML = matches
+      skillSuggestions.innerHTML = matches
         .map(
           (skill) =>
-            `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer dark:text-gray-200" onclick="addSkill('${skill}')">${skill}</div>`
+            `<div class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer" onclick="addSkill('${skill}')">${skill}</div>`
         )
         .join("");
-      suggestions.classList.remove("hidden");
+      skillSuggestions.classList.remove("hidden");
     } else {
-      suggestions.classList.add("hidden");
+      skillSuggestions.classList.add("hidden");
     }
   } else {
-    suggestions.classList.add("hidden");
+    skillSuggestions.classList.add("hidden");
+  }
+});
+
+skillInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    const skill = this.value.trim();
+    if (skill) {
+      addSkill(skill);
+    }
   }
 });
 
@@ -535,33 +548,28 @@ function handleRadioStyling() {
         currentRadio.closest(".grid").previousElementSibling;
       questionLabel.classList.remove("text-red-500");
 
-      // Reset styles for both radio buttons in the group
       document.querySelectorAll(`input[name="${groupName}"]`).forEach((r) => {
         const label = r.parentElement;
         label.classList.remove(...greenClasses, ...redClasses);
-        // Since all icons are now check-icons, we can target them directly
-        const icon = label.querySelector(".check-icon");
-        if (icon) {
-          icon.classList.add("opacity-0");
+        if (r.value === "yes") {
+          label.querySelector(".check-icon").classList.add("opacity-0");
+        } else {
+          label.querySelector(".check-icon").classList.add("opacity-0");
         }
       });
 
-      // Apply new styles to the selected radio button
       if (currentRadio.checked) {
         const parentLabel = currentRadio.parentElement;
+        const otherLabel = parentLabel.parentElement.querySelector(
+          `label:not([for="${parentLabel.getAttribute("for")}"])`
+        );
         parentLabel.classList.add(...greenClasses);
         parentLabel.querySelector(".check-icon").classList.remove("opacity-0");
-
-        // Hide the other option
-        if (currentRadio.value === "yes") {
-          parentLabel.parentElement
-            .querySelector('input[value="no"]')
-            .parentElement.classList.add("hidden");
-        } else {
-          parentLabel.parentElement
-            .querySelector('input[value="yes"]')
-            .parentElement.classList.add("hidden");
-        }
+        parentLabel.parentElement
+          .querySelector(
+            `input[value="${currentRadio.value === "yes" ? "no" : "yes"}"]`
+          )
+          .parentElement.classList.add("hidden");
       }
       clearQuickQuestionsBtn.classList.remove("hidden");
     });
@@ -690,5 +698,3 @@ function checkFieldValidity(el) {
   }
   return isValid;
 }
-
-tailwind.config = { darkMode: "class" };
