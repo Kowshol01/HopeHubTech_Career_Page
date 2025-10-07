@@ -389,7 +389,9 @@
         </div>
       </section>
 
+      <!-- Application Form Section -->
       <section id="application-form" class="w-full" data-aos="fade-up">
+        <!-- Multi-Step Form Start -->
         <div
           class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden max-w-7xl mx-auto"
         >
@@ -411,7 +413,7 @@
                 </p>
                 <p
                   id="stepCounter"
-                  class="text-sm text-gray-500 dark:text-gray-400 mt-4 font-medium"
+                  class="mt-4 inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full dark:bg-green-900 dark:text-green-200"
                 ></p>
               </div>
 
@@ -1002,6 +1004,7 @@
                       id="positionsContainer"
                       class="grid grid-cols-1 md:grid-cols-2 gap-3"
                     >
+                      <!-- Position Items -->
                       <label
                         class="relative flex p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700"
                       >
@@ -1157,6 +1160,10 @@
                         class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                         >Add your skills</label
                       >
+                      <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                        Type a skill and press Enter, or select from the list
+                        that appears.
+                      </p>
                       <input
                         type="text"
                         id="skillInput"
@@ -1326,5 +1333,9 @@
     </main>
 
     <script src="script.js"></script>
+
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
   </body>
 </html>
