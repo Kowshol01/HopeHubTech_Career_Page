@@ -301,6 +301,7 @@ const locations = {
   Sylhet: ["Sylhet", "Sunamganj", "Habiganj", "Moulvibazar"],
   Rajshahi: ["Rajshahi", "Bogra", "Pabna", "Naogaon"],
   Barisal: ["Barisal", "Patuakhali", "Bhola"],
+  Mymensingh: ["Mymensingh", "Jamalpur", "Netrokona", "Sherpur"],
   Rangpur: ["Rangpur", "Dinajpur", "Gaibandha"],
 };
 
@@ -431,6 +432,7 @@ const skills = [
 
 const skillInput = document.getElementById("skillInput");
 const skillSuggestions = document.getElementById("skillSuggestions");
+const addSkillBtn = document.getElementById("addSkillBtn"); // New button
 
 skillInput.addEventListener("input", function () {
   const input = this.value.toLowerCase();
@@ -463,6 +465,16 @@ skillInput.addEventListener("keydown", function (e) {
     }
   }
 });
+
+// START: NEW SCRIPT
+addSkillBtn.addEventListener("click", function () {
+  const skill = skillInput.value.trim();
+  if (skill) {
+    addSkill(skill);
+  }
+  skillInput.focus();
+});
+// END: NEW SCRIPT
 
 function addSkill(skill) {
   const selectedSkills = document.getElementById("selectedSkills");
