@@ -226,8 +226,10 @@ function validateStep(step) {
       }
     });
 
-    if (!checkFieldValidity(document.getElementById("fatherProfession")))
+    // START: MODIFIED VALIDATION
+    if (!checkFieldValidity(document.getElementById("familyIncome")))
       isValid = false;
+    // END: MODIFIED VALIDATION
   }
 
   if (step === 4) {
@@ -432,7 +434,7 @@ const skills = [
 
 const skillInput = document.getElementById("skillInput");
 const skillSuggestions = document.getElementById("skillSuggestions");
-const addSkillBtn = document.getElementById("addSkillBtn"); // New button
+const addSkillBtn = document.getElementById("addSkillBtn");
 
 skillInput.addEventListener("input", function () {
   const input = this.value.toLowerCase();
@@ -466,7 +468,6 @@ skillInput.addEventListener("keydown", function (e) {
   }
 });
 
-// START: NEW SCRIPT
 addSkillBtn.addEventListener("click", function () {
   const skill = skillInput.value.trim();
   if (skill) {
@@ -474,7 +475,6 @@ addSkillBtn.addEventListener("click", function () {
   }
   skillInput.focus();
 });
-// END: NEW SCRIPT
 
 function addSkill(skill) {
   const selectedSkills = document.getElementById("selectedSkills");
