@@ -953,20 +953,26 @@
 
                     <div class="relative">
                       <label
-                        for="fatherProfession"
+                        for="familyIncome"
                         class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                        >Father's Profession<span class="text-red-500"
+                        >Family Monthly Income<span class="text-red-500"
                           >*</span
                         ></label
                       >
-                      <input
-                        type="text"
-                        id="fatherProfession"
-                        name="fatherProfession"
+                      <select
+                        id="familyIncome"
+                        name="familyIncome"
                         required
-                        placeholder="e.g., Businessman"
                         class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
-                      />
+                      >
+                        <option value="" disabled selected>
+                          Select an income range
+                        </option>
+                        <option value="Below 15000">Below ৳15,000</option>
+                        <option value="15000-20000">৳15,000 - ৳20,000</option>
+                        <option value="20001-30000">৳20,001 - ৳30,000</option>
+                        <option value="Above 30000">Above ৳30,000</option>
+                      </select>
                       <div
                         class="absolute inset-y-0 right-0 top-6 pr-3 flex items-center pointer-events-none"
                       >
