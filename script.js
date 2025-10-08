@@ -226,10 +226,8 @@ function validateStep(step) {
       }
     });
 
-    // START: MODIFIED VALIDATION
     if (!checkFieldValidity(document.getElementById("familyIncome")))
       isValid = false;
-    // END: MODIFIED VALIDATION
   }
 
   if (step === 4) {
@@ -686,6 +684,7 @@ function checkFieldValidity(el) {
 
   const successIcon = parent.querySelector(".success-icon");
   const errorIcon = parent.querySelector(".error-icon");
+  const dropdownIcon = parent.querySelector(".dropdown-icon");
   let isValid = true;
 
   if (!el.value || el.value.trim() === "") {
@@ -702,11 +701,13 @@ function checkFieldValidity(el) {
     el.classList.add("border-green-500", "dark:border-green-500");
     if (successIcon) successIcon.classList.remove("hidden");
     if (errorIcon) errorIcon.classList.add("hidden");
+    if (dropdownIcon) dropdownIcon.classList.add("hidden");
   } else {
     el.classList.add("border-red-500", "dark:border-red-500");
     el.classList.remove("border-green-500", "dark:border-green-500");
     if (successIcon) successIcon.classList.add("hidden");
     if (errorIcon) errorIcon.classList.remove("hidden");
+    if (dropdownIcon) dropdownIcon.classList.add("hidden");
   }
   return isValid;
 }
